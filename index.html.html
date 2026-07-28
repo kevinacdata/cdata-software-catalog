@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CData Software Catalog</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f6f8;
+    color: #172b4d;
+    min-height: 100vh;
+  }
+
+  header {
+    background: #0a2540;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+
+  header span {
+    color: #8ba3c0;
+    font-size: 13px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px 12px;
+    background: #fff;
+    border-bottom: 1px solid #e3e6ea;
+    flex-wrap: wrap;
+  }
+
+  .search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    max-width: 380px;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8993a4;
+    pointer-events: none;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px 12px 8px 34px;
+    border: 1px solid #dfe1e6;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #172b4d;
+    background: #fafbfc;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  input[type="text"]:focus {
+    border-color: #4c9aff;
+    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
+    background: #fff;
+  }
+
+  select {
+    padding: 8px 12px;
+    border: 1px solid #dfe1e6;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #172b4d;
+    background: #fafbfc;
+    cursor: pointer;
+    outline: none;
+    min-width: 160px;
+  }
+
+  select:focus {
+    border-color: #4c9aff;
+    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
+  }
+
+  .count-badge {
+    margin-left: auto;
+    font-size: 13px;
+    color: #5e6c84;
+    white-space: nowrap;
+  }
+
+  .request-btn {
+    padding: 8px 16px;
+    background: #0052cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+
+  .request-btn:hover { background: #0065ff; }
+
+  .table-wrap {
+    padding: 16px 28px 32px;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e3e6ea;
+    font-size: 14px;
+  }
+
+  thead tr {
+    background: #f4f5f7;
+    border-bottom: 2px solid #e3e6ea;
+  }
+
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5e6c84;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  th:hover { color: #172b4d; }
+
+  th .sort-icon {
+    display: inline-block;
+    margin-left: 4px;
+    opacity: 0.4;
+    font-size: 10px;
+  }
+
+  th.sorted .sort-icon { opacity: 1; color: #0052cc; }
+
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #f0f1f3;
+    vertical-align: middle;
+    color: #172b4d;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  tbody tr:hover { background: #f8f9ff; }
+
+  td.label-cell {
+    font-weight: 500;
+    color: #0052cc;
+  }
+
+  td.desc-cell {
+    color: #5e6c84;
+    max-width: 340px;
+  }
+
+  .dept-pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .dept-IT        { background:#e3f2fd; color:#1565c0; }
+  .dept-Sales     { background:#e8f5e9; color:#2e7d32; }
+  .dept-Marketing { background:#f3e5f5; color:#6a1b9a; }
+  .dept-HR        { background:#fff3e0; color:#e65100; }
+  .dept-Engineering { background:#e0f2f1; color:#00695c; }
+  .dept-Security  { background:#fce4ec; color:#880e4f; }
+  .dept-Support   { background:#fff8e1; color:#f57f17; }
+  .dept-SRE       { background:#e8eaf6; color:#283593; }
+  .dept-default   { background:#f4f5f7; color:#5e6c84; }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #8993a4;
+  }
+
+  .empty-state p { font-size: 15px; margin-top: 8px; }
+
+  #loading, #error {
+    text-align: center;
+    padding: 60px;
+    color: #5e6c84;
+    font-size: 15px;
+  }
+
+  #error { color: #de350b; }
+
+  @media (max-width: 600px) {
+    .controls { padding: 12px 16px; }
+    .table-wrap { padding: 12px 16px 24px; }
+    header { padding: 14px 16px; }
+    td.desc-cell { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CData Software Catalog</h1>
+  <span id="last-updated"></span>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" id="search" placeholder="Search by name, description, or admin..." oninput="applyFilters()">
+  </div>
+
+  <select id="dept-filter" onchange="applyFilters()">
+    <option value="">All departments</option>
+  </select>
+
+  <select id="admin-filter" onchange="applyFilters()">
+    <option value="">All admins</option>
+  </select>
+
+  <span class="count-badge" id="count"></span>
+
+  <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2" target="_blank">
+    Request access ↗
+  </a>
+</div>
+
+<div class="table-wrap">
+  <div id="loading">Loading catalog...</div>
+  <div id="error" style="display:none"></div>
+  <table id="catalog-table" style="display:none">
+    <thead>
+      <tr>
+        <th onclick="sortBy('label')" id="th-label">Software <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">↕</span></th>
+        <th id="th-description">Description</th>
+        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">↕</span></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div class="empty-state" id="empty-state" style="display:none">
+    <strong>No results found</strong>
+    <p>Try a different search term or clear your filters.</p>
+  </div>
+</div>
+
+<script>
+const CSV_DIRECT = 'https://drive.google.com/uc?export=download&id=17zXJE5G3sVVD8nAvfQXRpNk8Jn4Oim5m';
+
+let allRows = [];
+let sortCol = 'label';
+let sortAsc = true;
+
+function deptClass(dept) {
+  if (!dept) return 'dept-default';
+  const d = dept.toLowerCase();
+  if (d.includes('it')) return 'dept-IT';
+  if (d.includes('sales')) return 'dept-Sales';
+  if (d.includes('marketing')) return 'dept-Marketing';
+  if (d.includes('hr') || d.includes('human')) return 'dept-HR';
+  if (d.includes('engineer')) return 'dept-Engineering';
+  if (d.includes('security')) return 'dept-Security';
+  if (d.includes('support')) return 'dept-Support';
+  if (d.includes('sre')) return 'dept-SRE';
+  return 'dept-default';
+}
+
+function populateFilters(rows) {
+  const depts = [...new Set(rows.flatMap(r => (r.department||'').split(';').map(s=>s.trim())).filter(Boolean))].sort();
+  const admins = [...new Set(rows.map(r => r['primary administrator']).filter(Boolean))].sort();
+
+  const deptSel = document.getElementById('dept-filter');
+  depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
+
+  const adminSel = document.getElementById('admin-filter');
+  admins.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; adminSel.appendChild(o); });
+}
+
+function sortBy(col) {
+  if (sortCol === col) { sortAsc = !sortAsc; }
+  else { sortCol = col; sortAsc = true; }
+  document.querySelectorAll('th').forEach(th => th.classList.remove('sorted'));
+  const thId = 'th-' + col.replace(/ /g, '-');
+  const th = document.getElementById(thId);
+  if (th) {
+    th.classList.add('sorted');
+    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const dept = document.getElementById('dept-filter').value;
+  const admin = document.getElementById('admin-filter').value;
+
+  let filtered = allRows.filter(r => {
+    const matchQ = !q || [r.label, r.description, r['primary administrator'], r.department]
+      .some(v => (v||'').toLowerCase().includes(q));
+    const matchDept = !dept || (r.department||'').split(';').map(s=>s.trim()).includes(dept);
+    const matchAdmin = !admin || r['primary administrator'] === admin;
+    return matchQ && matchDept && matchAdmin;
+  });
+
+  filtered.sort((a, b) => {
+    const va = (a[sortCol]||'').toLowerCase();
+    const vb = (b[sortCol]||'').toLowerCase();
+    return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+
+  document.getElementById('count').textContent = `${filtered.length} of ${allRows.length} apps`;
+  document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
+  document.getElementById('catalog-table').style.display = filtered.length ? '' : 'none';
+
+  filtered.forEach(r => {
+    const tr = document.createElement('tr');
+    const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
+    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
+    tr.innerHTML = `
+      <td class="label-cell">${r.label||'—'}</td>
+      <td>${pillsHtml}</td>
+      <td class="desc-cell">${r.description||'—'}</td>
+      <td>${r['primary administrator']||'—'}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+Papa.parse(CSV_DIRECT, {
+  download: true,
+  header: true,
+  skipEmptyLines: true,
+  transformHeader: h => h.trim().toLowerCase(),
+  complete(results) {
+    document.getElementById('loading').style.display = 'none';
+    allRows = results.data;
+    populateFilters(allRows);
+    document.getElementById('last-updated').textContent = 'Updated live from source';
+    sortBy('label');
+    document.getElementById('catalog-table').style.display = '';
+  },
+  error() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('error').textContent = 'Could not load catalog data. Make sure the Google Drive file is set to "Anyone with the link can view".';
+  }
+});
+</script>
+</body>
+</html>
