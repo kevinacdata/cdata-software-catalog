@@ -254,7 +254,7 @@
   <span class="count-badge" id="count"></span>
 
   <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2" target="_blank">
-    Request access ↗
+    Request access â
   </a>
 </div>
 
@@ -264,10 +264,10 @@
   <table id="catalog-table" style="display:none">
     <thead>
       <tr>
-        <th onclick="sortBy('label')" id="th-label">Software <span class="sort-icon">↕</span></th>
-        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">â</span></th>
+        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">â</span></th>
         <th id="th-description">Description</th>
-        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">â</span></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -282,7 +282,7 @@
 const CSV_DIRECT = 'data.csv';
 
 let allRows = [];
-let sortCol = 'label';
+let sortCol = 'software name';
 let sortAsc = true;
 
 function deptClass(dept) {
@@ -318,7 +318,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
+    th.querySelector('.sort-icon').textContent = sortAsc ? 'â' : 'â';
   }
   applyFilters();
 }
@@ -329,7 +329,7 @@ function applyFilters() {
   const admin = document.getElementById('admin-filter').value;
 
   let filtered = allRows.filter(r => {
-    const matchQ = !q || [r.label, r.description, r['primary administrator'], r.department]
+    const matchQ = !q || [r['software name'], r.description, r['primary administrator'], r.department]
       .some(v => (v||'').toLowerCase().includes(q));
     const matchDept = !dept || (r.department||'').split(';').map(s=>s.trim()).includes(dept);
     const matchAdmin = !admin || r['primary administrator'] === admin;
@@ -352,12 +352,12 @@ function applyFilters() {
   filtered.forEach(r => {
     const tr = document.createElement('tr');
     const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
-    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
+    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || 'â';
     tr.innerHTML = `
-      <td class="label-cell">${r.label||'—'}</td>
+      <td class="label-cell">${r['software name']||'â'}</td>
       <td>${pillsHtml}</td>
-      <td class="desc-cell">${r.description||'—'}</td>
-      <td>${r['primary administrator']||'—'}</td>
+      <td class="desc-cell">${r.description||'â'}</td>
+      <td>${r['primary administrator']||'â'}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -373,7 +373,7 @@ Papa.parse(CSV_DIRECT, {
     allRows = results.data;
     populateFilters(allRows);
     document.getElementById('last-updated').textContent = 'Updated live from source';
-    sortBy('label');
+    sortBy('software name');
     document.getElementById('catalog-table').style.display = '';
   },
   error() {
