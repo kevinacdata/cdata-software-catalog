@@ -11,7 +11,7 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: #f5f6f8;
-    color: #172b4d;h
+    color: #172b4d;
     min-height: 100vh;
   }
 
@@ -184,6 +184,27 @@
     max-width: 340px;
   }
 
+  .access-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: #e3f2fd;
+    color: #0052cc;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .access-link:hover { background: #cce0ff; }
+
+  .access-text {
+    font-size: 13px;
+    color: #5e6c84;
+  }
+
   .dept-pill {
     display: inline-block;
     padding: 2px 9px;
@@ -254,7 +275,7 @@
   <span class="count-badge" id="count"></span>
 
   <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2" target="_blank">
-    Request access â
+    Request access ↗
   </a>
 </div>
 
@@ -264,10 +285,11 @@
   <table id="catalog-table" style="display:none">
     <thead>
       <tr>
-        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">â</span></th>
-        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">â</span></th>
+        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">↕</span></th>
         <th id="th-description">Description</th>
-        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">â</span></th>
+        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('how to get access')" id="th-how-to-get-access">How to Get Access <span class="sort-icon">↕</span></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -318,7 +340,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? 'â' : 'â';
+    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
   }
   applyFilters();
 }
@@ -352,12 +374,17 @@ function applyFilters() {
   filtered.forEach(r => {
     const tr = document.createElement('tr');
     const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
-    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || 'â';
+    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
+    const accessVal = (r['how to get access']||'').trim();
+    const accessHtml = accessVal.toLowerCase() === 'helpdesk'
+      ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎟️ Helpdesk</a>`
+      : `<span class="access-text">${accessVal || '—'}</span>`;
     tr.innerHTML = `
-      <td class="label-cell">${r['software name']||'â'}</td>
+      <td class="label-cell">${r['software name']||'—'}</td>
       <td>${pillsHtml}</td>
-      <td class="desc-cell">${r.description||'â'}</td>
-      <td>${r['primary administrator']||'â'}</td>
+      <td class="desc-cell">${r.description||'—'}</td>
+      <td>${r['primary administrator']||'—'}</td>
+      <td>${accessHtml}</td>
     `;
     tbody.appendChild(tr);
   });
@@ -379,9 +406,9 @@ Papa.parse(CSV_DIRECT, {
   error() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error').style.display = 'block';
-    document.getElementById('error').textContent = 'Could not load catalog data. Make sure the Google Drive file is set to "Anyone with the link can view".';
+    document.getElementById('error').textContent = 'Could not load catalog data. Make sure data.csv is uploaded to the same GitHub repo as this file.';
   }
 });
 </script>
 </body>
-</html>
+ </html>
