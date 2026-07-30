@@ -335,7 +335,7 @@ function applyFilters() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const dept = document.getElementById('dept-filter').value;
   let filtered = allRows.filter(r => {
-    const matchQ = !q || [r['software name'], r.description, r['primary administrator'], r.department]
+    const matchQ = !q || [r['software name'], r.description, r['primary administrator'], r.department, r['how to get access']]
       .some(v => (v||'').toLowerCase().includes(q));
     const matchDept = !dept || (r.department||'').split(';').map(s=>s.trim()).includes(dept);
     return matchQ && matchDept;
