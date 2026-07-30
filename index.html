@@ -286,7 +286,6 @@
       <tr>
         <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
         <th id="th-description">Description</th>
-        <th onclick="sortBy('how to get access')" id="th-how-to-get-access">How to Get Access <span class="sort-icon">↕</span></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -372,7 +371,6 @@ function applyFilters() {
     tr.innerHTML = `
       <td class="label-cell">${r['software name']||'—'}</td>
       <td class="desc-cell">${r.description||'—'}</td>
-      <td>${accessHtml}</td>
     `;
     tbody.appendChild(tr);
   });
