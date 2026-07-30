@@ -30,11 +30,6 @@
     letter-spacing: -0.2px;
   }
 
-  header span {
-    color: #8ba3c0;
-    font-size: 13px;
-  }
-
   .controls {
     display: flex;
     align-items: center;
@@ -253,7 +248,6 @@
 
 <header>
   <h1>CData Software Catalog</h1>
-  <span id="last-updated"></span>
 </header>
 
 <div class="controls">
@@ -268,14 +262,10 @@
     <option value="">All departments</option>
   </select>
 
-  <select id="admin-filter" onchange="applyFilters()">
-    <option value="">All admins</option>
-  </select>
-
   <span class="count-badge" id="count"></span>
 
   <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2" target="_blank">
-    Request access ↗
+    Request access â
   </a>
 </div>
 
@@ -285,11 +275,11 @@
   <table id="catalog-table" style="display:none">
     <thead>
       <tr>
-        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
-        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">â</span></th>
+        <th onclick="sortBy('department')" id="th-department">Department <span class="sort-icon">â</span></th>
         <th id="th-description">Description</th>
-        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">↕</span></th>
-        <th onclick="sortBy('how to get access')" id="th-how-to-get-access">How to Get Access <span class="sort-icon">↕</span></th>
+        <th onclick="sortBy('primary administrator')" id="th-primary-administrator">Primary Admin <span class="sort-icon">â</span></th>
+        <th onclick="sortBy('how to get access')" id="th-how-to-get-access">How to Get Access <span class="sort-icon">â</span></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -323,13 +313,9 @@ function deptClass(dept) {
 
 function populateFilters(rows) {
   const depts = [...new Set(rows.flatMap(r => (r.department||'').split(';').map(s=>s.trim())).filter(Boolean))].sort();
-  const admins = [...new Set(rows.map(r => r['primary administrator']).filter(Boolean))].sort();
 
   const deptSel = document.getElementById('dept-filter');
   depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
-
-  const adminSel = document.getElementById('admin-filter');
-  admins.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; adminSel.appendChild(o); });
 }
 
 function sortBy(col) {
@@ -340,7 +326,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
+    th.querySelector('.sort-icon').textContent = sortAsc ? 'â' : 'â';
   }
   applyFilters();
 }
@@ -348,14 +334,11 @@ function sortBy(col) {
 function applyFilters() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const dept = document.getElementById('dept-filter').value;
-  const admin = document.getElementById('admin-filter').value;
-
   let filtered = allRows.filter(r => {
     const matchQ = !q || [r['software name'], r.description, r['primary administrator'], r.department]
       .some(v => (v||'').toLowerCase().includes(q));
     const matchDept = !dept || (r.department||'').split(';').map(s=>s.trim()).includes(dept);
-    const matchAdmin = !admin || r['primary administrator'] === admin;
-    return matchQ && matchDept && matchAdmin;
+    return matchQ && matchDept;
   });
 
   filtered.sort((a, b) => {
@@ -374,16 +357,16 @@ function applyFilters() {
   filtered.forEach(r => {
     const tr = document.createElement('tr');
     const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
-    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
+    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || 'â';
     const accessVal = (r['how to get access']||'').trim();
     const accessHtml = accessVal.toLowerCase() === 'helpdesk'
-      ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎟️ Helpdesk</a>`
-      : `<span class="access-text">${accessVal || '—'}</span>`;
+      ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">ð« Helpdesk</a>`
+      : `<span class="access-text">${accessVal || 'â'}</span>`;
     tr.innerHTML = `
-      <td class="label-cell">${r['software name']||'—'}</td>
+      <td class="label-cell">${r['software name']||'â'}</td>
       <td>${pillsHtml}</td>
-      <td class="desc-cell">${r.description||'—'}</td>
-      <td>${r['primary administrator']||'—'}</td>
+      <td class="desc-cell">${r.description||'â'}</td>
+      <td>${r['primary administrator']||'â'}</td>
       <td>${accessHtml}</td>
     `;
     tbody.appendChild(tr);
@@ -399,7 +382,6 @@ Papa.parse(CSV_DIRECT, {
     document.getElementById('loading').style.display = 'none';
     allRows = results.data;
     populateFilters(allRows);
-    document.getElementById('last-updated').textContent = 'Updated live from source';
     sortBy('software name');
     document.getElementById('catalog-table').style.display = '';
   },
@@ -411,4 +393,4 @@ Papa.parse(CSV_DIRECT, {
 });
 </script>
 </body>
- </html>
+</html>
