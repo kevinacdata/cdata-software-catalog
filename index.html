@@ -169,6 +169,21 @@
 
   tbody tr:hover { background: #f8f9ff; }
 
+  td.icon-cell {
+    width: 44px;
+    min-width: 44px;
+    padding: 8px 6px 8px 14px;
+  }
+
+  .app-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    object-fit: contain;
+    display: block;
+    background: #f4f5f7;
+  }
+
   td.label-cell {
     font-weight: 500;
     color: #0052cc;
@@ -284,6 +299,7 @@
   <table id="catalog-table" style="display:none">
     <thead>
       <tr>
+        <th id="th-icon" style="cursor:default;width:44px;"></th>
         <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
         <th id="th-description">Description</th>
       </tr>
@@ -298,6 +314,132 @@
 
 <script>
 const CSV_DIRECT = 'data.csv';
+const CDATA_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRTUwMCIvPjxwYXRoIGQ9Ik03MCwxNiBMNzAsMzQgTDM0LDM0IEMyMywzNCAxFCwzNCAxNCw1NCBDMTQsNjUgMjMsNzQgMzQsNzQgTDcwLDc0IEw3MCw5MiBMMzQsOTIgQzEzLDkyIC00LDc1IC00LDU0IEMtNCwzMyAxMywxNiAzNCwxNiBaIiBmaWxsPSIjMTExMTExIi8+PC9zdmc+Cg==';
+const LOGO_MAP = {
+  'quickbooks online': 'quickbooks.intuit.com',
+  'avalara': 'avalara.com',
+  'adp workforce now': 'adp.com',
+  'axosoft gitkraken git gui pro': 'gitkraken.com',
+  'adobe cloud': 'adobe.com',
+  'typeform s.l.': 'typeform.com',
+  'slack': 'slack.com',
+  'validity': 'validity.com',
+  'salesforce': 'salesforce.com',
+  'hubspot': 'hubspot.com',
+  'freshworks': 'freshworks.com',
+  'docusign': 'docusign.com',
+  'digital ocean cdata production': 'digitalocean.com',
+  'calendly': 'calendly.com',
+  'atlassian': 'atlassian.com',
+  'tableau': 'tableau.com',
+  'google cloud': 'cloud.google.com',
+  'snowflake computing': 'snowflake.com',
+  'atlassian tola': 'atlassian.com',
+  'auth0': 'auth0.com',
+  'asana': 'asana.com',
+  'ms azure web-prod-cdata': 'azure.microsoft.com',
+  'zoom video': 'zoom.us',
+  'hello sign': 'hellosign.com',
+  'lucid chart': 'lucid.app',
+  'canva': 'canva.com',
+  'carta': 'carta.com',
+  'snagit': 'techsmith.com',
+  'ariba': 'ariba.com',
+  'amazon business': 'amazon.com',
+  'malwarebytes endpoint': 'malwarebytes.com',
+  'google suite': 'google.com',
+  'figma pro': 'figma.com',
+  'meraki corporate vpn': 'meraki.com',
+  'codetwo': 'codetwo.com',
+  'globalscape': 'globalscape.com',
+  'godaddy': 'godaddy.com',
+  'sap se': 'sap.com',
+  'semrush': 'semrush.com',
+  'sprout social': 'sproutsocial.com',
+  'sage intacct': 'sage.com',
+  'citrix sharefile': 'sharefile.com',
+  'concur': 'concur.com',
+  'checkmarx': 'checkmarx.com',
+  'clearbit': 'clearbit.com',
+  'tenableio': 'tenable.com',
+  'parallels desktop for mac business edition': 'parallels.com',
+  'myob': 'myob.com',
+  'reckon.com': 'reckon.com',
+  'happyfox': 'happyfox.com',
+  'lexion': 'lexion.ai',
+  'orca': 'orca.security',
+  'ms azure cdata-support': 'azure.microsoft.com',
+  'ms azure cdata-prod': 'azure.microsoft.com',
+  'ms azure cdata-dev': 'azure.microsoft.com',
+  'aws cdata-test': 'aws.amazon.com',
+  'aws cdata admin': 'aws.amazon.com',
+  'camtasia': 'techsmith.com',
+  'aws arcesb admin': 'aws.amazon.com',
+  '1password': '1password.com',
+  'dialpad': 'dialpad.com',
+  'match my email': 'matchmyemail.com',
+  'nuget': 'nuget.org',
+  'linkedin: sales navigator': 'linkedin.com',
+  'perimeter 81': 'perimeter81.com',
+  'iru': 'kandji.io',
+  'pluralsight lcc': 'pluralsight.com',
+  'chameleon': 'chameleon.io',
+  'netsuite': 'netsuite.com',
+  'celigo': 'celigo.com',
+  'toga labs': 'gethomerun.com',
+  'marketo, inc': 'marketo.com',
+  'duende software': 'duendesoftware.com',
+  'docker': 'docker.com',
+  'clearscope': 'clearscope.io',
+  'wellsaid labs': 'wellsaidlabs.com',
+  'ardira': 'ardira.com',
+  'datadog': 'datadoghq.com',
+  'digicert': 'digicert.com',
+  'complianceline': 'complianceline.com',
+  'greenhouse': 'greenhouse.io',
+  'ms azure cdata-engineering': 'azure.microsoft.com',
+  'ms azure cdata-support-devtest': 'azure.microsoft.com',
+  'sendgrid': 'sendgrid.com',
+  'pager duty': 'pagerduty.com',
+  'zoho': 'zoho.com',
+  'articulate 360': 'articulate.com',
+  'cloudflare': 'cloudflare.com',
+  'cognism': 'cognism.com',
+  'seamless.ai': 'seamless.ai',
+  'open ai/chat gpt': 'openai.com',
+  'atrium': 'atriumhq.com',
+  'eazfuscator': 'gapotchenko.com',
+  'clickcease': 'clickcease.com',
+  'goldcast inc.': 'goldcast.io',
+  'navattic inc': 'navattic.com',
+  'asknicely': 'asknicely.com',
+  'smartsheet business tier': 'smartsheet.com',
+  'textexpander - support text management': 'textexpander.com',
+  'chatgpt teams': 'openai.com',
+  'twitter / x developer plan - basic tier': 'x.com',
+  'qualified': 'qualified.com',
+  'sendgrid essentials': 'sendgrid.com',
+  'claude': 'anthropic.com',
+  'nooks.ai': 'nooks.ai',
+  'gong.io': 'gong.io',
+  'mintlify': 'mintlify.com',
+  'knock.io': 'knock.app',
+  'polly': 'polly.ai',
+  'macstadium': 'macstadium.com',
+  'clay': 'clay.com',
+  'effico': 'effico.app',
+  'cursor': 'cursor.com',
+  'mindtickle/core': 'mindtickle.com',
+  'gamma connector in claude enterprise': 'gamma.app',
+  'n8n': 'n8n.io',
+  'dovetail': 'dovetail.com',
+  'github enterprise': 'github.com',
+  'ballpark': 'ballparkhq.com',
+  'twilio': 'twilio.com',
+  'bigquery': 'cloud.google.com',
+  'office 365': 'microsoft.com',
+  'cdata connectai': 'cdata.com',
+};
 
 let allRows = [];
 let sortCol = 'software name';
@@ -368,7 +510,10 @@ function applyFilters() {
     const accessHtml = accessVal.toLowerCase() === 'helpdesk'
       ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎫 Helpdesk</a>`
       : `<span class="access-text">${accessVal || '—'}</span>`;
+    const domain = LOGO_MAP[(r['software name']||'').toLowerCase().trim()];
+    const logoSrc = domain ? `https://logo.clearbit.com/${domain}` : CDATA_ICON;
     tr.innerHTML = `
+      <td class="icon-cell"><img src="${logoSrc}" class="app-icon" onerror="this.onerror=null;this.src='${CDATA_ICON}'"></td>
       <td class="label-cell">${r['software name']||'—'}</td>
       <td class="desc-cell">${r.description||'—'}</td>
     `;
