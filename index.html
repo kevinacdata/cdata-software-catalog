@@ -7,260 +7,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f5f6f8;
-    color: #172b4d;
-    min-height: 100vh;
-  }
-
-  header {
-    background: #000000;
-    padding: 16px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  header h1 {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.2px;
-  }
-
-  .controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 28px 12px;
-    background: #fff;
-    border-bottom: 1px solid #e3e6ea;
-    flex-wrap: wrap;
-  }
-
-  .search-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 200px;
-    max-width: 380px;
-  }
-
-  .search-wrap svg {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #8993a4;
-    pointer-events: none;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    padding: 8px 12px 8px 34px;
-    border: 1px solid #dfe1e6;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #172b4d;
-    background: #fafbfc;
-    outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-
-  input[type="text"]:focus {
-    border-color: #4c9aff;
-    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
-    background: #fff;
-  }
-
-  select {
-    padding: 8px 12px;
-    border: 1px solid #dfe1e6;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #172b4d;
-    background: #fafbfc;
-    cursor: pointer;
-    outline: none;
-    min-width: 160px;
-  }
-
-  select:focus {
-    border-color: #4c9aff;
-    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
-  }
-
-  .count-badge {
-    margin-left: auto;
-    font-size: 13px;
-    color: #5e6c84;
-    white-space: nowrap;
-  }
-
-  .request-btn {
-    padding: 8px 16px;
-    background: #0052cc;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
-
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f6f8; color: #172b4d; min-height: 100vh; }
+  header { background: #000000; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; }
+  header h1 { color: #fff; font-size: 18px; font-weight: 600; letter-spacing: -0.2px; }
+  .controls { display: flex; align-items: center; gap: 10px; padding: 16px 28px 12px; background: #fff; border-bottom: 1px solid #e3e6ea; flex-wrap: wrap; }
+  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 380px; }
+  .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #8993a4; pointer-events: none; }
+  input[type="text"] { width: 100%; padding: 8px 12px 8px 34px; border: 1px solid #dfe1e6; border-radius: 6px; font-size: 14px; color: #172b4d; background: #fafbfc; outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+  input[type="text"]:focus { border-color: #4c9aff; box-shadow: 0 0 0 2px rgba(76,154,255,0.2); background: #fff; }
+  select { padding: 8px 12px; border: 1px solid #dfe1e6; border-radius: 6px; font-size: 14px; color: #172b4d; background: #fafbfc; cursor: pointer; outline: none; min-width: 160px; }
+  select:focus { border-color: #4c9aff; box-shadow: 0 0 0 2px rgba(76,154,255,0.2); }
+  .count-badge { margin-left: auto; font-size: 13px; color: #5e6c84; white-space: nowrap; }
+  .request-btn { padding: 8px 16px; background: #0052cc; color: #fff; border: none; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
   .request-btn:hover { background: #0065ff; }
-
-  .table-wrap {
-    padding: 16px 28px 32px;
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #e3e6ea;
-    font-size: 14px;
-  }
-
-  thead tr {
-    background: #f4f5f7;
-    border-bottom: 2px solid #e3e6ea;
-  }
-
-  th {
-    padding: 10px 14px;
-    text-align: left;
-    font-size: 12px;
-    font-weight: 600;
-    color: #5e6c84;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-  }
-
+  .table-wrap { padding: 16px 28px 32px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e3e6ea; font-size: 14px; }
+  thead tr { background: #f4f5f7; border-bottom: 2px solid #e3e6ea; }
+  th { padding: 10px 14px; text-align: left; font-size: 12px; font-weight: 600; color: #5e6c84; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; white-space: nowrap; }
   th:hover { color: #172b4d; }
-
-  th .sort-icon {
-    display: inline-block;
-    margin-left: 4px;
-    opacity: 0.4;
-    font-size: 10px;
-  }
-
+  th .sort-icon { display: inline-block; margin-left: 4px; opacity: 0.4; font-size: 10px; }
   th.sorted .sort-icon { opacity: 1; color: #0052cc; }
-
-  td {
-    padding: 11px 14px;
-    border-bottom: 1px solid #f0f1f3;
-    vertical-align: middle;
-    color: #172b4d;
-  }
-
+  td { padding: 11px 14px; border-bottom: 1px solid #f0f1f3; vertical-align: middle; color: #172b4d; }
   tbody tr:last-child td { border-bottom: none; }
-
   tbody tr:hover { background: #f8f9ff; }
-
-  td.icon-cell {
-    width: 44px;
-    min-width: 44px;
-    padding: 8px 6px 8px 14px;
-  }
-
-  .app-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    object-fit: contain;
-    display: block;
-    background: #f4f5f7;
-  }
-
-  td.label-cell {
-    font-weight: 500;
-    color: #0052cc;
-  }
-
-  td.desc-cell {
-    color: #5e6c84;
-    max-width: 340px;
-  }
-
-  .access-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 3px 10px;
-    background: #e3f2fd;
-    color: #0052cc;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
+  td.icon-cell { width: 44px; min-width: 44px; padding: 8px 6px 8px 14px; }
+  .app-icon { width: 28px; height: 28px; border-radius: 6px; object-fit: contain; display: block; background: #f4f5f7; }
+  td.label-cell { font-weight: 500; color: #0052cc; }
+  td.desc-cell { color: #5e6c84; max-width: 340px; }
+  .access-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: #e3f2fd; color: #0052cc; border-radius: 20px; font-size: 12px; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background 0.15s; }
   .access-link:hover { background: #cce0ff; }
-
-  .access-text {
-    font-size: 13px;
-    color: #5e6c84;
-  }
-
-  .dept-pill {
-    display: inline-block;
-    padding: 2px 9px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .dept-IT        { background:#e3f2fd; color:#1565c0; }
-  .dept-Sales     { background:#e8f5e9; color:#2e7d32; }
+  .access-text { font-size: 13px; color: #5e6c84; }
+  .dept-pill { display: inline-block; padding: 2px 9px; border-radius: 20px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .dept-IT { background:#e3f2fd; color:#1565c0; }
+  .dept-Sales { background:#e8f5e9; color:#2e7d32; }
   .dept-Marketing { background:#f3e5f5; color:#6a1b9a; }
-  .dept-HR        { background:#fff3e0; color:#e65100; }
+  .dept-HR { background:#fff3e0; color:#e65100; }
   .dept-Engineering { background:#e0f2f1; color:#00695c; }
-  .dept-Security  { background:#fce4ec; color:#880e4f; }
-  .dept-Support   { background:#fff8e1; color:#f57f17; }
-  .dept-SRE       { background:#e8eaf6; color:#283593; }
-  .dept-default   { background:#f4f5f7; color:#5e6c84; }
-
-  .empty-state {
-    text-align: center;
-    padding: 60px 20px;
-    color: #8993a4;
-  }
-
+  .dept-Security { background:#fce4ec; color:#880e4f; }
+  .dept-Support { background:#fff8e1; color:#f57f17; }
+  .dept-SRE { background:#e8eaf6; color:#283593; }
+  .dept-default { background:#f4f5f7; color:#5e6c84; }
+  .empty-state { text-align: center; padding: 60px 20px; color: #8993a4; }
   .empty-state p { font-size: 15px; margin-top: 8px; }
-
-  #loading, #error {
-    text-align: center;
-    padding: 60px;
-    color: #5e6c84;
-    font-size: 15px;
-  }
-
+  #loading, #error { text-align: center; padding: 60px; color: #5e6c84; font-size: 15px; }
   #error { color: #de350b; }
-
-  @media (max-width: 600px) {
-    .controls { padding: 12px 16px; }
-    .table-wrap { padding: 12px 16px 24px; }
-    header { padding: 14px 16px; }
-    td.desc-cell { display: none; }
-  }
+  @media (max-width: 600px) { .controls { padding: 12px 16px; } .table-wrap { padding: 12px 16px 24px; } header { padding: 14px 16px; } td.desc-cell { display: none; } }
 </style>
 </head>
 <body>
-
 <header>
   <div style="display:flex; align-items:center; gap:16px;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 346" height="26" style="color:#FFE500; flex-shrink:0;">
@@ -273,281 +67,40 @@
     <h1>Software Catalog</h1>
   </div>
 </header>
-
 <div class="controls">
   <div class="search-wrap">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Search by name or description..." oninput="applyFilters()">
   </div>
-
-  <select id="dept-filter" onchange="applyFilters()">
-    <option value="">All departments</option>
-  </select>
-
+  <select id="dept-filter" onchange="applyFilters()"><option value="">All departments</option></select>
   <span class="count-badge" id="count"></span>
-
-  <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">
-    Request access ↗
-  </a>
+  <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access ↗</a>
 </div>
-
 <div class="table-wrap">
   <div id="loading">Loading catalog...</div>
   <div id="error" style="display:none"></div>
   <table id="catalog-table" style="display:none">
-    <thead>
-      <tr>
-        <th id="th-icon" style="cursor:default;width:44px;"></th>
-        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
-        <th id="th-description">Description</th>
-      </tr>
-    </thead>
+    <thead><tr>
+      <th id="th-icon" style="cursor:default;width:44px;"></th>
+      <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
+      <th id="th-description">Description</th>
+    </tr></thead>
     <tbody id="tbody"></tbody>
   </table>
-  <div class="empty-state" id="empty-state" style="display:none">
-    <strong>No results found</strong>
-    <p>Try a different search term or clear your filters.</p>
-  </div>
+  <div class="empty-state" id="empty-state" style="display:none"><strong>No results found</strong><p>Try a different search term or clear your filters.</p></div>
 </div>
-
 <script>
-const CSV_DIRECT = 'data.csv';
+const GITHUB_TOKEN = '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';
+const CSV_URL = 'https://raw.githubusercontent.com/kevinacdata/cdata-software-catalog/main/data.csv';
 const CDATA_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRTUwMCIvPjxwYXRoIGQ9Ik03MCwxNiBMNzAsMzQgTDM0LDM0IEMyMywzNCAxNCw0MyAxNCw1NCBDMTQsNjUgMjMsNzQgMzQsNzQgTDcwLDc0IEw3MCw5MiBMMzQsOTIgQzEzLDkyIC00LDc1IC00LDU0IEMtNCwzMyAxMywxNiAzNCwxNiBaIiBmaWxsPSIjMTExMTExIi8+PC9zdmc+Cg==';
-const LOGO_MAP = {
-  'quickbooks online': 'quickbooks.intuit.com',
-  'avalara': 'avalara.com',
-  'adp workforce now': 'adp.com',
-  'axosoft gitkraken git gui pro': 'gitkraken.com',
-  'adobe cloud': 'adobe.com',
-  'typeform s.l.': 'typeform.com',
-  'slack': 'slack.com',
-  'validity': 'validity.com',
-  'salesforce': 'salesforce.com',
-  'hubspot': 'hubspot.com',
-  'freshworks': 'freshworks.com',
-  'docusign': 'docusign.com',
-  'digital ocean cdata production': 'digitalocean.com',
-  'calendly': 'calendly.com',
-  'atlassian': 'atlassian.com',
-  'tableau': 'tableau.com',
-  'google cloud': 'cloud.google.com',
-  'snowflake computing': 'snowflake.com',
-  'atlassian tola': 'atlassian.com',
-  'auth0': 'auth0.com',
-  'asana': 'asana.com',
-  'ms azure web-prod-cdata': 'azure.microsoft.com',
-  'zoom video': 'zoom.us',
-  'hello sign': 'hellosign.com',
-  'lucid chart': 'lucid.app',
-  'canva': 'canva.com',
-  'carta': 'carta.com',
-  'snagit': 'techsmith.com',
-  'ariba': 'ariba.com',
-  'amazon business': 'amazon.com',
-  'malwarebytes endpoint': 'malwarebytes.com',
-  'google suite': 'google.com',
-  'figma pro': 'figma.com',
-  'meraki corporate vpn': 'meraki.com',
-  'codetwo': 'codetwo.com',
-  'globalscape': 'globalscape.com',
-  'godaddy': 'godaddy.com',
-  'sap se': 'sap.com',
-  'semrush': 'semrush.com',
-  'sprout social': 'sproutsocial.com',
-  'sage intacct': 'sage.com',
-  'citrix sharefile': 'sharefile.com',
-  'concur': 'concur.com',
-  'checkmarx': 'checkmarx.com',
-  'clearbit': 'clearbit.com',
-  'tenableio': 'tenable.com',
-  'parallels desktop for mac business edition': 'parallels.com',
-  'myob': 'myob.com',
-  'reckon.com': 'reckon.com',
-  'happyfox': 'happyfox.com',
-  'lexion': 'lexion.ai',
-  'orca': 'orca.security',
-  'ms azure cdata-support': 'azure.microsoft.com',
-  'ms azure cdata-prod': 'azure.microsoft.com',
-  'ms azure cdata-dev': 'azure.microsoft.com',
-  'aws cdata-test': 'aws.amazon.com',
-  'aws cdata admin': 'aws.amazon.com',
-  'camtasia': 'techsmith.com',
-  'aws arcesb admin': 'aws.amazon.com',
-  '1password': '1password.com',
-  'dialpad': 'dialpad.com',
-  'match my email': 'matchmyemail.com',
-  'nuget': 'nuget.org',
-  'linkedin: sales navigator': 'linkedin.com',
-  'perimeter 81': 'perimeter81.com',
-  'iru': 'kandji.io',
-  'pluralsight lcc': 'pluralsight.com',
-  'chameleon': 'chameleon.io',
-  'netsuite': 'netsuite.com',
-  'celigo': 'celigo.com',
-  'toga labs': 'gethomerun.com',
-  'marketo, inc': 'marketo.com',
-  'duende software': 'duendesoftware.com',
-  'docker': 'docker.com',
-  'clearscope': 'clearscope.io',
-  'wellsaid labs': 'wellsaidlabs.com',
-  'ardira': 'ardira.com',
-  'datadog': 'datadoghq.com',
-  'digicert': 'digicert.com',
-  'complianceline': 'complianceline.com',
-  'greenhouse': 'greenhouse.io',
-  'ms azure cdata-engineering': 'azure.microsoft.com',
-  'ms azure cdata-support-devtest': 'azure.microsoft.com',
-  'sendgrid': 'sendgrid.com',
-  'pager duty': 'pagerduty.com',
-  'zoho': 'zoho.com',
-  'articulate 360': 'articulate.com',
-  'cloudflare': 'cloudflare.com',
-  'cognism': 'cognism.com',
-  'seamless.ai': 'seamless.ai',
-  'open ai/chat gpt': 'openai.com',
-  'atrium': 'atriumhq.com',
-  'eazfuscator': 'gapotchenko.com',
-  'clickcease': 'clickcease.com',
-  'goldcast inc.': 'goldcast.io',
-  'navattic inc': 'navattic.com',
-  'asknicely': 'asknicely.com',
-  'smartsheet business tier': 'smartsheet.com',
-  'textexpander - support text management': 'textexpander.com',
-  'chatgpt teams': 'openai.com',
-  'twitter / x developer plan - basic tier': 'x.com',
-  'qualified': 'qualified.com',
-  'sendgrid essentials': 'sendgrid.com',
-  'claude': 'anthropic.com',
-  'nooks.ai': 'nooks.ai',
-  'gong.io': 'gong.io',
-  'mintlify': 'mintlify.com',
-  'knock.io': 'knock.app',
-  'polly': 'polly.ai',
-  'macstadium': 'macstadium.com',
-  'clay': 'clay.com',
-  'effico': 'effico.app',
-  'cursor': 'cursor.com',
-  'mindtickle/core': 'mindtickle.com',
-  'gamma connector in claude enterprise': 'gamma.app',
-  'n8n': 'n8n.io',
-  'dovetail': 'dovetail.com',
-  'github enterprise': 'github.com',
-  'ballpark': 'ballparkhq.com',
-  'twilio': 'twilio.com',
-  'bigquery': 'cloud.google.com',
-  'office 365': 'microsoft.com',
-  'cdata connectai': 'cdata.com',
-};
-
-let allRows = [];
-let sortCol = 'software name';
-let sortAsc = true;
-
-function guessDomain(name) {
-  const cleaned = name.toLowerCase()
-    .replace(/\b(inc\.?|llc\.?|ltd\.?|corp\.?|co\.?|enterprise|enterprises|pro|plus|business|teams|suite|cloud|online|platform|software|services|service|solutions?|tier|plan|basic|advanced|standard|premium|professional|management|networks?|global|digital|technologies?|group|labs?|systems?|consulting|desktop|for|mac|edition|video|corporate|vpn)\b/g, ' ')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
-  const first = cleaned.split(/\s+/)[0];
-  return first ? first + '.com' : null;
-}
-
-function deptClass(dept) {
-  if (!dept) return 'dept-default';
-  const d = dept.toLowerCase();
-  if (d.includes('it')) return 'dept-IT';
-  if (d.includes('sales')) return 'dept-Sales';
-  if (d.includes('marketing')) return 'dept-Marketing';
-  if (d.includes('hr') || d.includes('human')) return 'dept-HR';
-  if (d.includes('engineer')) return 'dept-Engineering';
-  if (d.includes('security')) return 'dept-Security';
-  if (d.includes('support')) return 'dept-Support';
-  if (d.includes('sre')) return 'dept-SRE';
-  return 'dept-default';
-}
-
-function populateFilters(rows) {
-  const depts = [...new Set(rows.flatMap(r => (r.department||'').split(';').map(s=>s.trim())).filter(Boolean))].sort();
-
-  const deptSel = document.getElementById('dept-filter');
-  depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
-}
-
-function sortBy(col) {
-  if (sortCol === col) { sortAsc = !sortAsc; }
-  else { sortCol = col; sortAsc = true; }
-  document.querySelectorAll('th').forEach(th => th.classList.remove('sorted'));
-  const thId = 'th-' + col.replace(/ /g, '-');
-  const th = document.getElementById(thId);
-  if (th) {
-    th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
-  }
-  applyFilters();
-}
-
-function applyFilters() {
-  const q = document.getElementById('search').value.toLowerCase().trim();
-  const dept = document.getElementById('dept-filter').value;
-  let filtered = allRows.filter(r => {
-    const matchQ = !q || [r['software name'], r.description, r['primary administrator'], r.department, r['how to get access']]
-      .some(v => (v||'').toLowerCase().includes(q));
-    const matchDept = !dept || (r.department||'').split(';').map(s=>s.trim()).includes(dept);
-    return matchQ && matchDept;
-  });
-
-  filtered.sort((a, b) => {
-    const va = (a[sortCol]||'').toLowerCase();
-    const vb = (b[sortCol]||'').toLowerCase();
-    return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
-  });
-
-  const tbody = document.getElementById('tbody');
-  tbody.innerHTML = '';
-
-  document.getElementById('count').textContent = `${filtered.length} of ${allRows.length} apps`;
-  document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
-  document.getElementById('catalog-table').style.display = filtered.length ? '' : 'none';
-
-  filtered.forEach(r => {
-    const tr = document.createElement('tr');
-    const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
-    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
-    const accessVal = (r['how to get access']||'').trim();
-    const accessHtml = accessVal.toLowerCase() === 'helpdesk'
-      ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎫 Helpdesk</a>`
-      : `<span class="access-text">${accessVal || '—'}</span>`;
-    const domain = LOGO_MAP[(r['software name']||'').toLowerCase().trim()] || guessDomain(r['software name']||'');
-    const logoSrc = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64` : CDATA_ICON;
-    tr.innerHTML = `
-      <td class="icon-cell"><img src="${logoSrc}" class="app-icon" onerror="this.onerror=null;this.src='${CDATA_ICON}'"></td>
-      <td class="label-cell">${r['software name']||'—'}</td>
-      <td class="desc-cell">${r.description||'—'}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-Papa.parse(CSV_DIRECT, {
-  download: true,
-  header: true,
-  skipEmptyLines: true,
-  transformHeader: h => h.trim().toLowerCase(),
-  complete(results) {
-    document.getElementById('loading').style.display = 'none';
-    allRows = results.data;
-    populateFilters(allRows);
-    sortBy('software name');
-    document.getElementById('catalog-table').style.display = '';
-  },
-  error() {
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('error').style.display = 'block';
-    document.getElementById('error').textContent = 'Could not load catalog data. Make sure data.csv is uploaded to the same GitHub repo as this file.';
-  }
-});
+const LOGO_MAP = {'quickbooks online':'quickbooks.intuit.com','avalara':'avalara.com','adp workforce now':'adp.com','axosoft gitkraken git gui pro':'gitkraken.com','adobe cloud':'adobe.com','typeform s.l.':'typeform.com','slack':'slack.com','validity':'validity.com','salesforce':'salesforce.com','hubspot':'hubspot.com','freshworks':'freshworks.com','docusign':'docusign.com','digital ocean cdata production':'digitalocean.com','calendly':'calendly.com','atlassian':'atlassian.com','tableau':'tableau.com','google cloud':'cloud.google.com','snowflake computing':'snowflake.com','atlassian tola':'atlassian.com','auth0':'auth0.com','asana':'asana.com','ms azure web-prod-cdata':'azure.microsoft.com','zoom video':'zoom.us','hello sign':'hellosign.com','lucid chart':'lucid.app','canva':'canva.com','carta':'carta.com','snagit':'techsmith.com','ariba':'ariba.com','amazon business':'amazon.com','malwarebytes endpoint':'malwarebytes.com','google suite':'google.com','figma pro':'figma.com','meraki corporate vpn':'meraki.com','codetwo':'codetwo.com','globalscape':'globalscape.com','godaddy':'godaddy.com','sap se':'sap.com','semrush':'semrush.com','sprout social':'sproutsocial.com','sage intacct':'sage.com','citrix sharefile':'sharefile.com','concur':'concur.com','checkmarx':'checkmarx.com','clearbit':'clearbit.com','tenableio':'tenable.com','parallels desktop for mac business edition':'parallels.com','myob':'myob.com','reckon.com':'reckon.com','happyfox':'happyfox.com','lexion':'lexion.ai','orca':'orca.security','ms azure cdata-support':'azure.microsoft.com','ms azure cdata-prod':'azure.microsoft.com','ms azure cdata-dev':'azure.microsoft.com','aws cdata-test':'aws.amazon.com','aws cdata admin':'aws.amazon.com','camtasia':'techsmith.com','aws arcesb admin':'aws.amazon.com','1password':'1password.com','dialpad':'dialpad.com','match my email':'matchmyemail.com','nuget':'nuget.org','linkedin: sales navigator':'linkedin.com','perimeter 81':'perimeter81.com','iru':'kandji.io','pluralsight lcc':'pluralsight.com','chameleon':'chameleon.io','netsuite':'netsuite.com','celigo':'celigo.com','toga labs':'gethomerun.com','marketo, inc':'marketo.com','duende software':'duendesoftware.com','docker':'docker.com','clearscope':'clearscope.io','wellsaid labs':'wellsaidlabs.com','ardira':'ardira.com','datadog':'datadoghq.com','digicert':'digicert.com','complianceline':'complianceline.com','greenhouse':'greenhouse.io','ms azure cdata-engineering':'azure.microsoft.com','ms azure cdata-support-devtest':'azure.microsoft.com','sendgrid':'sendgrid.com','pager duty':'pagerduty.com','zoho':'zoho.com','articulate 360':'articulate.com','cloudflare':'cloudflare.com','cognism':'cognism.com','seamless.ai':'seamless.ai','open ai/chat gpt':'openai.com','atrium':'atriumhq.com','eazfuscator':'gapotchenko.com','clickcease':'clickcease.com','goldcast inc.':'goldcast.io','navattic inc':'navattic.com','asknicely':'asknicely.com','smartsheet business tier':'smartsheet.com','textexpander - support text management':'textexpander.com','chatgpt teams':'openai.com','twitter / x developer plan - basic tier':'x.com','qualified':'qualified.com','sendgrid essentials':'sendgrid.com','claude':'anthropic.com','nooks.ai':'nooks.ai','gong.io':'gong.io','mintlify':'mintlify.com','knock.io':'knock.app','polly':'polly.ai','macstadium':'macstadium.com','clay':'clay.com','effico':'effico.app','cursor':'cursor.com','mindtickle/core':'mindtickle.com','gamma connector in claude enterprise':'gamma.app','n8n':'n8n.io','dovetail':'dovetail.com','github enterprise':'github.com','ballpark':'ballparkhq.com','twilio':'twilio.com','bigquery':'cloud.google.com','office 365':'microsoft.com','cdata connectai':'cdata.com'};
+let allRows=[],sortCol='software name',sortAsc=true;
+function guessDomain(name){const cleaned=name.toLowerCase().replace(/\b(inc\.?|llc\.?|ltd\.?|corp\.?|co\.?|enterprise|enterprises|pro|plus|business|teams|suite|cloud|online|platform|software|services|service|solutions?|tier|plan|basic|advanced|standard|premium|professional|management|networks?|global|digital|technologies?|group|labs?|systems?|consulting|desktop|for|mac|edition|video|corporate|vpn)\b/g,' ').replace(/[^a-z0-9]+/g,' ').trim();const first=cleaned.split(/\s+/)[0];return first?first+'.com':null;}
+function deptClass(dept){if(!dept)return 'dept-default';const d=dept.toLowerCase();if(d.includes('it'))return 'dept-IT';if(d.includes('sales'))return 'dept-Sales';if(d.includes('marketing'))return 'dept-Marketing';if(d.includes('hr')||d.includes('human'))return 'dept-HR';if(d.includes('engineer'))return 'dept-Engineering';if(d.includes('security'))return 'dept-Security';if(d.includes('support'))return 'dept-Support';if(d.includes('sre'))return 'dept-SRE';return 'dept-default';}
+function populateFilters(rows){const depts=[...new Set(rows.flatMap(r=>(r.department||'').split(';').map(s=>s.trim())).filter(Boolean))].sort();const deptSel=document.getElementById('dept-filter');depts.forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;deptSel.appendChild(o);});}
+function sortBy(col){if(sortCol===col){sortAsc=!sortAsc;}else{sortCol=col;sortAsc=true;}document.querySelectorAll('th').forEach(th=>th.classList.remove('sorted'));const thId='th-'+col.replace(/ /g,'-');const th=document.getElementById(thId);if(th){th.classList.add('sorted');th.querySelector('.sort-icon').textContent=sortAsc?'↑':'↓';}applyFilters();}
+function applyFilters(){const q=document.getElementById('search').value.toLowerCase().trim();const dept=document.getElementById('dept-filter').value;let filtered=allRows.filter(r=>{const matchQ=!q||[r['software name'],r.description,r['primary administrator'],r.department,r['how to get access']].some(v=>(v||'').toLowerCase().includes(q));const matchDept=!dept||(r.department||'').split(';').map(s=>s.trim()).includes(dept);return matchQ&&matchDept;});filtered.sort((a,b)=>{const va=(a[sortCol]||'').toLowerCase();const vb=(b[sortCol]||'').toLowerCase();return sortAsc?va.localeCompare(vb):vb.localeCompare(va);});const tbody=document.getElementById('tbody');tbody.innerHTML='';document.getElementById('count').textContent=filtered.length+' of '+allRows.length+' apps';document.getElementById('empty-state').style.display=filtered.length?'none':'block';document.getElementById('catalog-table').style.display=filtered.length?'':'none';filtered.forEach(r=>{const tr=document.createElement('tr');const accessVal=(r['how to get access']||'').trim();const domain=LOGO_MAP[(r['software name']||'').toLowerCase().trim()]||guessDomain(r['software name']||'');const logoSrc=domain?'https://www.google.com/s2/favicons?domain='+domain+'&sz=64':CDATA_ICON;tr.innerHTML='<td class="icon-cell"><img src="'+logoSrc+'" class="app-icon" onerror="this.onerror=null;this.src=\''+CDATA_ICON+'\'" ></td><td class="label-cell">'+(r['software name']||'—')+'</td><td class="desc-cell">'+(r.description||'—')+'</td>';tbody.appendChild(tr);});}
+fetch(CSV_URL,{headers:{'Authorization':'token '+GITHUB_TOKEN}}).then(res=>{if(!res.ok)throw new Error('HTTP '+res.status);return res.text();}).then(csvText=>{Papa.parse(csvText,{header:true,skipEmptyLines:true,transformHeader:h=>h.trim().toLowerCase(),complete(results){document.getElementById('loading').style.display='none';allRows=results.data;populateFilters(allRows);sortBy('software name');document.getElementById('catalog-table').style.display='';}});}).catch(err=>{document.getElementById('loading').style.display='none';document.getElementById('error').style.display='block';document.getElementById('error').textContent='Could not load catalog data. ('+err.message+')';});
 </script>
 </body>
 </html>
