@@ -62,7 +62,6 @@ Concur,Expense reporting,Active,Elliott York,Olivia Davis,,General & Admin,,Reac
 Checkmarx,Code Scanner ,Active,Steve Close,Bill Golembieski,Tomas Restrepo,Security,,Reach Out To Primary Administrator
 Clearbit,"The native HubSpot prospecting solution. Identify your top target accounts, understand who is ready to buy, then instantly find their contact information.",Active,Adam DeMichele,Will Davis,,Sales,,Reach Out To Primary Administrator
 TenableIO,Vulnerability scanner,Active,Steve Close,Walt Cobb,,Security,,Reach Out To Primary Administrator
-15Five,Performance management/recognition software,Active,Elliott York,Valerie Brecht,Lyndsay Moyles,General & Admin; HR,,Reach Out To Primary Administrator
 Parallels Desktop for Mac Business Edition,Solution for optimizing business environments to run Windows applications on an Intel or Apple M1 chip Mac,Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin,,Helpdesk
 MyOB,"MYOB is an Australian multinational corporation that provides tax, accounting and other business services software to small and medium businesses. It is owned by KKR.",Active,Steve Close,John Gwaltney,,Support,,Reach Out To Primary Administrator
 reckon.com,AU Accounting Software,Active,Steve Close,Ricky Chiu,,,,Helpdesk
@@ -149,27 +148,7 @@ OFAC checker,OFAC Checker - as an application running in SF will help the legal 
 TextExpander - Support Text Management ,"TextExpander is a powerful text expansion tool designed to enhance productivity by allowing users to create customizable snippets for frequently used content. By typing short abbreviations, users can instantly insert predefined text, reducing repetitive typing and ensuring consistency across communications. This functionality is particularly beneficial for teams aiming to streamline workflows and maintain uniform messaging. ",Active,Adam DeMichele,John Gwaltney,IT Admin,Support,,Reach Out To Primary Administrator
 ChatGPT Teams,Retrieval-Augmented Generation (RAG) utilizing ChatGPT Teams to the Product Marketing team.,Active,Will Davis,Marie Forshaw,Ricky Chiu,Marketing,,Reach Out To Primary Administrator
 Twitter / X developer plan - Basic Tier,"For the maintenance and testing of the TwitterAds (X ads) driver, we require a developer account with a subscription to at least the Basic tier.",Active,Raviv Levi,Armando Horaj,IT Admin,Product Management,,Reach Out To Primary Administrator
-Qualified,"Qualified - POC Lead Qualifying and Routing Platform
-
-Executive Summary
-
-Qualified's Conversational Sales and Marketing Platform for accelerated pipeline generation.
-
-Real-Time Engagement: Qualified enables organizations to accelerate pipeline generation by engaging website visitors in real time.
-
-AI-Driven Chatbots and Visitor Intelligence: Utilizing AI-driven chatbots and visitor intelligence, the platform identifies high-intent leads and routes them to appropriate sales resources, facilitating faster and more relevant conversations.
-
-Seamless Integrations: Qualified offers seamless integrations with Salesforce, Pardot, Microsoft, and other core business systems, centralizing lead data and automating follow-ups.
-
-Personalized Conversations: The platform initiates personalized conversations through live chat, efficiently converting leads into customers.
-
-End-to-End Visibility: Qualified provides comprehensive visibility into the buyer journey while maintaining enterprise-grade security and compliance.
-
-Competitive Advantage: In evaluation scorecards comparing competitors, Qualified consistently scores above the rest.  
-
-Marketing: Use on websites to supplement form fills with this product. This uses chat to help fill those forms. When someone isn't directly engaged with an agent, redirection towards related knowledge bases, blogs, and/or community. Also, logs customer uses and feedback.
-
-https://cdatajira.atlassian.net/browse/CIT-5037?atlOrigin=eyJpIjoiOTIxODc0MDNmMWU0NGU5Mjk2MzhlZjI5MWFiZjg5YmUiLCJwIjoiaiJ9",Active,Will Davis,IT Admin,IT Admin,Marketing,,Helpdesk
+Qualified,Qualified instantly alerts sales reps when hot prospects arrive on your site. Qualified is the conversational sales and marketing platform for revenue teams,Active,Will Davis,IT Admin,Bogdan Maciejuk,Marketing,,Helpdesk
 Sendgrid Essentials,"It is designed for small businesses, developers, and startups needing programmatic API/SMTP or basic marketing sends without high-tier enterprise costs.",Active,Steve Close,Ricky Chiu,Jordan Texier,Support,,Helpdesk
 Claude,"Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work. ",Active,Steve Close,Ricky Chiu,Kevin Andrews,Marketing; Sales; Engineering; Support; IT,,Helpdesk
 Nooks.ai,"Nooks AI Dialer automates call tasks to boost volume, connects, and conversion rates.",Active,Adam DeMichele,Kevin Andrews,David Little,Sales,"add the user to Nooks SEP Azure group 
@@ -206,3 +185,5 @@ BigQuery ,"BigQuery is the autonomous data to AI platform, automating the entire
 
 -eric m",Reach Out To Primary Administrator
 Office 365,"Microsoft 365 is a subscription service that includes familiar apps like Word, Excel, and PowerPoint, plus services like OneDrive, Teams, Outlook",Active,Steve Close,Ricky Chiu,Kevin Andrews,IT,,All users get this by default
+CData ConnectAI,"Connect AI assistants, agents, and automations to semantic-rich models of your enterprise data in minutes.
+In house product.",Active,Steve Close,Ricky Chiu,Kevin Andrews,Engineering; IT; Support,,Helpdesk
