@@ -445,6 +445,15 @@ let allRows = [];
 let sortCol = 'software name';
 let sortAsc = true;
 
+function guessDomain(name) {
+  const cleaned = name.toLowerCase()
+    .replace(/\b(inc\.?|llc\.?|ltd\.?|corp\.?|co\.?|enterprise|enterprises|pro|plus|business|teams|suite|cloud|online|platform|software|services|service|solutions?|tier|plan|basic|advanced|standard|premium|professional|management|networks?|global|digital|technologies?|group|labs?|systems?|consulting|desktop|for|mac|edition|video|corporate|vpn)\b/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+  const first = cleaned.split(/\s+/)[0];
+  return first ? first + '.com' : null;
+}
+
 function deptClass(dept) {
   if (!dept) return 'dept-default';
   const d = dept.toLowerCase();
@@ -510,7 +519,7 @@ function applyFilters() {
     const accessHtml = accessVal.toLowerCase() === 'helpdesk'
       ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎫 Helpdesk</a>`
       : `<span class="access-text">${accessVal || '—'}</span>`;
-    const domain = LOGO_MAP[(r['software name']||'').toLowerCase().trim()];
+    const domain = LOGO_MAP[(r['software name']||'').toLowerCase().trim()] || guessDomain(r['software name']||'');
     const logoSrc = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64` : CDATA_ICON;
     tr.innerHTML = `
       <td class="icon-cell"><img src="${logoSrc}" class="app-icon" onerror="this.onerror=null;this.src='${CDATA_ICON}'"></td>
