@@ -314,7 +314,7 @@
 
 <script>
 const CSV_DIRECT = 'data.csv';
-const CDATA_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRTUwMCIvPjxwYXRoIGQ9Ik03MCwxNiBMNzAsMzQgTDM0LDM0IEMyMywzNCAxFCwzNCAxNCw1NCBDMTQsNjUgMjMsNzQgMzQsNzQgTDcwLDc0IEw3MCw5MiBMMzQsOTIgQzEzLDkyIC00LDc1IC00LDU0IEMtNCwzMyAxMywxNiAzNCwxNiBaIiBmaWxsPSIjMTExMTExIi8+PC9zdmc+Cg==';
+const CDATA_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0ZGRTUwMCIvPjxwYXRoIGQ9Ik03MCwxNiBMNzAsMzQgTDM0LDM0IEMyMywzNCAxNCw0MyAxNCw1NCBDMTQsNjUgMjMsNzQgMzQsNzQgTDcwLDc0IEw3MCw5MiBMMzQsOTIgQzEzLDkyIC00LDc1IC00LDU0IEMtNCwzMyAxMywxNiAzNCwxNiBaIiBmaWxsPSIjMTExMTExIi8+PC9zdmc+Cg==';
 const LOGO_MAP = {
   'quickbooks online': 'quickbooks.intuit.com',
   'avalara': 'avalara.com',
@@ -511,7 +511,7 @@ function applyFilters() {
       ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎫 Helpdesk</a>`
       : `<span class="access-text">${accessVal || '—'}</span>`;
     const domain = LOGO_MAP[(r['software name']||'').toLowerCase().trim()];
-    const logoSrc = domain ? `https://logo.clearbit.com/${domain}` : CDATA_ICON;
+    const logoSrc = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64` : CDATA_ICON;
     tr.innerHTML = `
       <td class="icon-cell"><img src="${logoSrc}" class="app-icon" onerror="this.onerror=null;this.src='${CDATA_ICON}'"></td>
       <td class="label-cell">${r['software name']||'—'}</td>
