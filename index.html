@@ -179,11 +179,6 @@
     max-width: 340px;
   }
 
-  td.action-cell {
-    white-space: nowrap;
-    width: 1%;
-  }
-
   .access-link {
     display: inline-flex;
     align-items: center;
@@ -278,6 +273,9 @@
 
   <span class="count-badge" id="count"></span>
 
+  <a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">
+    Request access ↗
+  </a>
 </div>
 
 <div class="table-wrap">
@@ -288,7 +286,6 @@
       <tr>
         <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
         <th id="th-description">Description</th>
-        <th id="th-action"></th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -374,7 +371,6 @@ function applyFilters() {
     tr.innerHTML = `
       <td class="label-cell">${r['software name']||'—'}</td>
       <td class="desc-cell">${r.description||'—'}</td>
-      <td class="action-cell"><a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access ↗</a></td>
     `;
     tbody.appendChild(tr);
   });
