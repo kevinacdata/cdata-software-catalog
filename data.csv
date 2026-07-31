@@ -1,27 +1,29 @@
 Software Name,Description,Status,License/Owner,Primary Administrator,Secondary Administrator,Department,Notes,How to Get Access
-Quickbooks Online,Accounting/tax Software,Active,Elliott York,Olivia Davis,,General & Admin; Sales,,Reach Out To Primary Administrator
+Quickbooks Online,Organize & manage your business with the #1 rated solution. ,Active,Elliott York,Olivia Davis,,General & Admin; Sales,,Reach Out To Primary Administrator
 Avalara,Automated Sales Tax Solution,Active,Elliott York,Jeanny Mccomas,Olivia Davis,General & Admin; Sales,,Reach Out To Primary Administrator
-ADP Workforce Now,HRIS for Payroll and benefits for US employees,Active,Elliott York,Valerie Brecht,Lyndsay Moyles,General & Admin; HR,,Reach Out To Primary Administrator
-Axosoft GitKraken Git GUI Pro,Code processing git tools,Active,Tomas Restrepo,Blake Martin,Mike Albritton,Engineering,,Reach Out To Primary Administrator
-Adobe Cloud,All Adobe Apps,Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin,,Helpdesk
-Typeform S.L.,Interactive forms,Active,Will Davis,Lorin Manco,Eric Madariaga,Marketing; General & Admin,,Reach Out To Primary Administrator
-Slack,Communication platform,Active,Steve Close,Kevin Andrews,Ricky Chiu,IT; General & Admin,,Helpdesk
-Validity,"email marketing, data management or sales functions",Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
-Salesforce,Customer account and sales data,Active,Adam DeMichele,Bogdan Maciejuk,Ricky Chiu,Sales; General & Admin,,Reach Out To Primary Administrator
-Hubspot,CRM software,Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
-Freshworks,Customer Helpdesk,Active,Adam DeMichele,John Gwaltney,Chris Hoffman,General & Admin; Support,,Reach Out To Primary Administrator
-Docusign,Digital Signature,Active,Adam DeMichele,Kevin Andrews,Bogdan Maciejuk,Sales; General & Admin,Add user to Enterprise app in entra,Helpdesk
+ADP Workforce Now,"ADP Workforce Now empowers clients to effectively address business challenges with a flexible, secure and integrated HCM solution.",Active,Elliott York,Valerie Brecht,Lyndsay Moyles,General & Admin; HR,,Reach Out To Primary Administrator
+Axosoft GitKraken Git GUI Pro,"GitKraken Desktop Pro (originally developed by Axosoft) is a premium, cross-platform graphical user interface (GUI) designed to simplify and speed up Git version control workflows. It replaces complex command-line sequences with a highly visual, drag-and-drop interactive commit graph available on Windows, Mac, and Linux.",Active,Tomas Restrepo,Blake Martin,Mike Albritton,Engineering,,Reach Out To Primary Administrator
+Adobe Cloud,"Enjoy the collection of professional creative software in Adobe Creative Cloud including Photoshop, Illustrator, Premiere & more on desktop, mobile & web.",Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin,,Helpdesk
+Typeform S.L.,Combine AI forms and automated workflows to drive revenue growth. Run in-depth research and manage the entire customer lifecycle. All in Typeform.,Active,Will Davis,Lorin Manco,Eric Madariaga,Marketing; General & Admin,,Reach Out To Primary Administrator
+Slack,"Slack is a cloud-based team communication and collaboration platform developed by Slack Technologies, which Salesforce acquired in 2020. Originally an internal tool, it publicly launched in February 2014, headquartered in San Francisco. Known for its channel-based system, direct messaging, calls, and over 2,400 app integrations, Slack operates on a freemium model offering core features and paid plans for expanded capabilities",Active,Steve Close,Kevin Andrews,Ricky Chiu,IT; General & Admin,,Helpdesk
+Validity,"Validity brings global email signals into one AI-powered email platform—so teams ship successful campaigns with less risk, less rework, and more confidence",Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
+Salesforce,"Salesforce is a cloud-based Customer Relationship Management (CRM) platform that centralizes customer data, automates business workflows, and connects different departments like sales, service, and marketing. It acts as a single shared hub so companies can track customer interactions, manage sales pipelines, and run AI-assisted operations.",Active,Adam DeMichele,Bogdan Maciejuk,Ricky Chiu,Sales; General & Admin,,Reach Out To Primary Administrator
+Hubspot,HubSpot is a leading agentic customer platform that provides software and support to help businesses grow better.,Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
+Freshworks,"Built for agile enterprises, Freshworks runs employee service and customer support on AI-powered workflows, so teams move faster with less friction.
+
+For customer support. ",Active,Adam DeMichele,John Gwaltney,Chris Hoffman,General & Admin; Support,,Reach Out To Primary Administrator
+Docusign,"Send, sign, and track documents. Get signatures from anywhere, using almost any device. Finalize agreements faster.",Active,Adam DeMichele,Kevin Andrews,Bogdan Maciejuk,Sales; General & Admin,Add user to Enterprise app in entra,Helpdesk
 Digital Ocean CData Production,"Production environment hosting assorted infrastructure resources, such as CData's old wiki (w.cdata.com), an IMAP server, Bugzilla (b.cdata.com) Japan salesforce database and platform. 
 
 ",Active,Steve Close,Ricky Chiu,Zak Reynolds,IT; Engineering,,Helpdesk
-Calendly,Appointment Scheduler,Active,Will Davis,Jerod Johnson,Ricky Chiu,Marketing; General & Admin,,Reach Out To Primary Administrator
+Calendly,"Calendly is the modern scheduling platform that makes “finding time” a breeze. When connecting is easy, your teams can get more done.
+",Active,Will Davis,Jerod Johnson,Ricky Chiu,Marketing; General & Admin,,Reach Out To Primary Administrator
 Atlassian,"Atlassian is an enterprise software company specializing in team collaboration, issue tracking, and project management tools, most notably Jira, Confluence, and Trello.
 
 This encompasses access for Jira, Confluence, etc. ",Active,Steve Close,Brett Couture,Ricky Chiu,Engineering; IT,,All employees get this by default.
-Tableau,BI (business intelligence),Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
-Google Cloud,Google Cloud storage,Active,Steve Close,Ricky Chiu,Chris Hoffman,Support,,Helpdesk
-Snowflake Computing,Cloud Data warehouse,Active,Tomas Restrepo,John Gwaltney,Tomas Restrepo,Support,,Reach Out To Primary Administrator
-Atlassian Tola,Jira Test Account,Active,Genti Tola,John Gwaltney,Fatbardh Qato,Support,,Reach Out To Primary Administrator
+Tableau,"Tableau is a popular interactive data visualization and business intelligence software platform used to create dynamic graphs, dashboards, and business insights without requiring advanced coding.",Active,Adam DeMichele,Bogdan Maciejuk,Matt Webb,General & Admin; Sales,,Reach Out To Primary Administrator
+Google Cloud,"Meet your business challenges head on with AI and cloud computing services from Google, including security, data management, and hybrid & multi-cloud.",Active,Steve Close,Ricky Chiu,Chris Hoffman,Support,,Helpdesk
+Snowflake Computing,"Snowflake powers AI, data engineering, applications, and analytics on a trusted, scalable AI Data Cloud—eliminating silos and accelerating innovation.",Active,Tomas Restrepo,John Gwaltney,Tomas Restrepo,Support,,Reach Out To Primary Administrator
 Auth0,"Authentication and authorization platform. 
 Tenants - cdata-connect-dev and cdata-connect-prod",Active,Steve Close,Ricky Chiu,Mike Albritton,Engineering,,Helpdesk
 Asana,Project Management,Active,Will Davis,Eric Madariaga,Ricky Chiu,Marketing,,Reach Out To Primary Administrator
@@ -30,17 +32,16 @@ This environment is exclusively hosting the CData homepage and product marketing
 
 
 Subscription ID: 02e1321e-3b90-42d0-b3bd-ace6fb37dc45",Reach Out To Primary Administrator
-Zoom Video,Marketing Zoom account,Active,Will Davis,Eric Madariaga,Ricky Chiu,Marketing,,Reach Out To Primary Administrator
-Hello Sign,Legally binding electronic signatures,Active,Will Davis,Eric Madariaga,Will Davis,Marketing,,Reach Out To Primary Administrator
-Lucid Chart,"Flowcharts & diagrams online to visualize ideas
-
-This Paid Individuals  no need for an IAM Audit
-",Active,Will Davis,Eric Madariaga,Lorin Manco,Marketing,,Reach Out To Primary Administrator
-Canva,Custom templates and stock images,Active,Will Davis,Andre Thompson,Will Davis,Marketing,,Reach Out To Primary Administrator
-Carta,Equity management platform,Active,Elliott York,Elliott York,,General & Admin,,Reach Out To Primary Administrator
-Snagit,Screen Capture program,Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin; IT,,Helpdesk
-Ariba,Procurement Software,Active,Will Davis,Bogdan Maciejuk,Will Davis,General & Admin,,Reach Out To Primary Administrator
-Amazon Business,Amazon equipment and office supply purchases,Active,Steve Close,Ricky Chiu,,IT,,Helpdesk
+Zoom Video,"Modernize workflows with Zoom's trusted collaboration tools: including video meetings, Zoom Chat, VoIP phone, webinars, whiteboard, contact center.",Active,Will Davis,Eric Madariaga,Ricky Chiu,Marketing,Marketing Zoom account,Reach Out To Primary Administrator
+Hello Sign,"Dropbox Sign (formerly HelloSign) is the easiest way to send, receive and manage legally binding electronic signatures.",Active,Will Davis,Eric Madariaga,Will Davis,Marketing,,Reach Out To Primary Administrator
+Lucid Chart,"Create next-generation diagrams with AI, data, and automation in Lucidchart. Understand and optimize every system and process.",Active,Will Davis,Eric Madariaga,Lorin Manco,Marketing,"This Paid Individuals  no need for an IAM Audit
+",Reach Out To Primary Administrator
+Canva,"Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",Active,Will Davis,Andre Thompson,Will Davis,Marketing,,Reach Out To Primary Administrator
+Carta,"Carta's ERP for private capital combines software and services to deliver connected clarity and control across equity, fund, and portfolio management.",Active,Elliott York,Elliott York,,General & Admin,,Reach Out To Primary Administrator
+Snagit,"Snagit is a tool for screen capture and screen recording. Use it to grab screenshots of your screen, including long, scrolling pages, and record quick videos.",Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin; IT,,Helpdesk
+Ariba,"Procurement Software.
+SAP Business Network - Achieve frictionless, real-time business collaboration. SAP Business Network enables customers and trading partners",Active,Will Davis,Bogdan Maciejuk,Will Davis,General & Admin,,Reach Out To Primary Administrator
+Amazon Business,Corporate Amazon Account for equipment and office supply purchases.,Active,Steve Close,Ricky Chiu,,IT,,Helpdesk
 Malwarebytes Endpoint,Malwarebytes AV,Active,Steve Close,Kevin Andrews,Ricky Chiu,IT,No license information on invoice assuming perpetual.,Helpdesk
 Google Suite,CData Google accounts and associated apps.,Active,Steve Close,Kevin Andrews,Ricky Chiu,IT,,Helpdesk
 Figma Pro,Cloud based UI/UX designer software,Active,Steve Close,Kevin Andrews,Ricky Chiu,IT,,Helpdesk
@@ -51,25 +52,27 @@ Meraki
 CodeTwo,"Centrally managed Signature App.
 
 Added by default to all accounts.",Active,Will Davis,Ricky Chiu,Kevin Andrews,Marketing; IT,,All users get this by default
-Globalscape,Secure and Manage your Data Transfers with Globalscape File Transfer,Active,Will Davis,Will Davis,,Marketing,,Reach Out To Primary Administrator
-GoDaddy,Domain Registration/Records,Active,Steve Close,Ricky Chiu,Eric Madariaga,Marketing; General & Admin,,Helpdesk
-SAP SE,Expense reporting software.,Active,Elliott York,Elliott York,,,,Reach Out To Primary Administrator
-Semrush,Search Engine Marketing,Active,Will Davis,Brooke Reese,,Marketing,,Reach Out To Primary Administrator
-Sprout Social,Social Media Management,Active,Will Davis,Luc Leblanc,,Marketing,,Reach Out To Primary Administrator
+Globalscape,Globalscape is a one-stop-shop for a managed FTP service. It allows the monitoring of folders and custom triggers for transmitting files to a location.,Active,Will Davis,Will Davis,,Marketing,,Reach Out To Primary Administrator
+GoDaddy,"GoDaddy is an all-in-one internet platform primarily used to buy domain names, host websites, and build online stores. It functions as a central hub where individuals and small businesses can get their brand online",Active,Steve Close,Ricky Chiu,Eric Madariaga,Marketing; General & Admin,,Helpdesk
+SAP SE,"SAP (Systems, Applications, & Products) is a leading ERP software providing integrated, real-time management of business functions like finance, HR, supply chain, and sales. Key features include a centralized database, real-time processing, modular architecture, automated workflows, advanced analytics, and global scalability, enabling better decision-making, efficiency, and data security. ",Active,Elliott York,Elliott York,,,,Reach Out To Primary Administrator
+Semrush,"Semrush is the leading platform to grow and measure brand visibility across AI search, SEO, PPC, social, and more.",Active,Will Davis,Brooke Reese,,Marketing,,Reach Out To Primary Administrator
+Sprout Social,"Maximize your social ROI with Sprout Social, trusted by the world's most talked about brands. Power everything from publishing and engagement to analytics.",Active,Will Davis,Luc Leblanc,,Marketing,,Reach Out To Primary Administrator
 Sage Intacct,Sage Intacct is a powerful cloud accounting software designed to streamline financial management for growing organizations,Active,Elliott York,David Kleiss,,,,Reach Out To Primary Administrator
 Citrix Sharefile,"ShareFile is a secure content collaboration, file sharing and sync software that supports all the document-centric tasks and workflow needs of small and large businesses. The company also offers cloud-based or on-premises storage, virtual data rooms and client portals. ShareFile is owned by Citrix Systems",Active,Elliott York,Elliott York,,,,Reach Out To Primary Administrator
-Concur,Expense reporting,Active,Elliott York,Olivia Davis,,General & Admin,,Reach Out To Primary Administrator
+Concur," SAP Concur is a cloud-based platform that centralizes spend processes, giving your company better visibility and control over spending.
+
+Used for Employee Reimbursements. ",Active,Elliott York,Olivia Davis,,General & Admin,,Reach Out To Primary Administrator
 Checkmarx,Code Scanner ,Active,Steve Close,Bill Golembieski,Tomas Restrepo,Security,,Reach Out To Primary Administrator
 Clearbit,"The native HubSpot prospecting solution. Identify your top target accounts, understand who is ready to buy, then instantly find their contact information.",Active,Adam DeMichele,Will Davis,,Sales,,Reach Out To Primary Administrator
 TenableIO,Vulnerability scanner,Active,Steve Close,Walt Cobb,,Security,,Reach Out To Primary Administrator
 Parallels Desktop for Mac Business Edition,Solution for optimizing business environments to run Windows applications on an Intel or Apple M1 chip Mac,Active,Steve Close,Kevin Andrews,Ricky Chiu,General & Admin,,Helpdesk
 MyOB,"MYOB is an Australian multinational corporation that provides tax, accounting and other business services software to small and medium businesses. It is owned by KKR.",Active,Steve Close,John Gwaltney,,Support,,Reach Out To Primary Administrator
-reckon.com,AU Accounting Software,Active,Steve Close,Ricky Chiu,,,,Helpdesk
+reckon.com,"Australian accounting and payroll software that's made for small business, accountants, & bookkeepers.",Active,Steve Close,Ricky Chiu,,,,Helpdesk
 Happyfox,"HappyFox is a cloud-based customer relationship management solution that provides help desk and ticketing solutions to businesses across various industries, including computer and software, education, travel and leisure, media and publishing, energy, retail, and more.",Active,Adam DeMichele,John Gwaltney,Ricky Chiu,Support,,Reach Out To Primary Administrator
-Lexion,Contract Management System,Active,Elliott York,Bogdan Maciejuk,Ricky Chiu,Legal,"Contract volume = 2,500
+Lexion,"Lexion helps operations teams get deals done faster. See how you can accelerate sales, procurement, legal, HR, security reviews, and more.",Active,Elliott York,Bogdan Maciejuk,Ricky Chiu,Legal,"Contract volume = 2,500
 Legal Seats = 2@$150 p/m
 Unlimited Business seats",Reach Out To Primary Administrator
-Orca ,Threat detection SaaS,Active,Steve Close,Walt Cobb,Ricky Chiu,Security,,Reach Out To Primary Administrator
+Orca ,Secure your multi-cloud environment from build to runtime with the industry-leading CNAPP.,Active,Steve Close,Walt Cobb,Ricky Chiu,Security,,Reach Out To Primary Administrator
 MS Azure CData-Support ,"This account is exclusively used to replicate issues our customers have while interacting with CData products/services and Azure services, its constantly changing. ",Active,Steve Close,Ricky Chiu,John Gwaltney,Support,Subscription ID: 420d4a16-a1ea-44fc-a5fc-62a3c65eed92,Helpdesk
 MS Azure CData-prod,"Connect Cloud Prod
 This environment hosts the production connect Cloud single-tenant and muti-tenant platform, and the arcCloud platform. It also hosts Azure AD for company-wide authentication and all azure services used for event logging, blob storage, Kubernetes, DNS dominos, VPC networking, load balancers, and virtual machines, etc.",Active,Steve Close,Brett Couture,Tomas Restrepo,SRE,Subscription ID: 89e303a7-bce8-4a38-8ed8-67fb3d66808,Reach Out To Primary Administrator
@@ -87,21 +90,25 @@ Product: Connect Cloud and Legacy arcCloud
 Camtasia,"Camtasia is a software suite, created and published by TechSmith, for creating and recording video tutorials and presentations via screencast, or via a direct recording plug-in to Microsoft PowerPoint. Other multimedia recordings may be recorded at the same time or added separately.",Active,Steve Close,Kevin Andrews,Ricky Chiu,Product Management,,Helpdesk
 AWS ArcESB admin ,"ArcESB is for legacy customer's, not used anymore for new customers, for the time being its not possible to migrate customers to the new ArcESB environment - this account must keep running. ",Active,Steve Close,Ricky Chiu,Zak Reynolds,Engineering,"Account ID: 557235424952
 ",Helpdesk
-1Password,"Used Organizational wide, password manager.",Active,Steve Close,Ricky Chiu,Kevin Andrews,IT,,Helpdesk
+1Password,"Protect passwords and secrets, manage app access, and secure AI tools with 1Password.",Active,Steve Close,Ricky Chiu,Kevin Andrews,IT,,Helpdesk
 Dialpad ,"VOIP voice solution with an integration to 
 SFDC
 ",Active,Adam DeMichele,Kevin Andrews,John Gwaltney,Support,Add user to enterprise app in Entra,Helpdesk
 Match My Email ,Email synchronization tool which ensures all emails sent from Outlook are logged and shown in Salesforce.,Active,Elliott York,Bogdan Maciejuk,Jared Feeny,Sales,,Reach Out To Primary Administrator
-NuGet,Customer facing and the accounts are for us to add/update packages.,Active,Tomas Restrepo,Garrett Early,Chris Hoffman,Engineering,,Reach Out To Primary Administrator
+NuGet,"NuGet is the package manager for .NET. The NuGet client tools provide the ability to produce and consume packages.
+
+Customer facing and the accounts are for us to add/update packages.",Active,Tomas Restrepo,Garrett Early,Chris Hoffman,Engineering,,Reach Out To Primary Administrator
 LinkedIn: Sales Navigator," A paid, AI-powered B2B sales platform featuring advanced search filters, lead recommendations, and direct InMail messaging.",Active,Adam DeMichele,Bogdan Maciejuk,,Sales,,Reach Out To Primary Administrator
-Perimeter 81 ,"secure corporate network, cloud ",Active,Steve Close,Ricky Chiu,Kevin Andrews,Engineering; IT,,Helpdesk
+Perimeter 81 ,"Boost your Network Security in minutes and secure corporate network with Check Point SASE (Formerly Perimeter 81 now called Harmony SASE)
+Corporate VPN
+",Active,Steve Close,Ricky Chiu,Kevin Andrews,Engineering; IT,,Helpdesk
 Iru,"Iru is the Apple device management and security platform that empowers secure and productive global work.
-MDM for Mac OS, installed by default on every Apple device.
+MDM for Mac OS
 ",Active,Steve Close,Kevin Andrews,Ricky Chiu,IT,,Helpdesk
 Pluralsight LCC ,Training platform for mainly support and engineering to skill up or acquire certificates. It is also used for OWASP security training,Active,Steve Close,Kevin Andrews,Ricky Chiu,IT; HR,,Helpdesk
 Chameleon ,"Chameleon gives modern SaaS teams the most control, configuration, and customization to win with in-product UX. We use this product in Connect Cloud to solicit feedback/surveys from customers, and also have walkthroughs of new features.
 ",Active,Steve Close,Manish Patel,Ricky Chiu,Engineering,,Reach Out To Primary Administrator
-NetSuite,Accounting software,Active,Elliott York,Olivia Davis,,General & Admin,Renewal for the August 2023-August 2024 period currently in place. ,Reach Out To Primary Administrator
+NetSuite,"NetSuite is the leading integrated cloud business software suite, including business accounting, ERP, CRM and ecommerce software.",Active,Elliott York,Olivia Davis,,General & Admin,Renewal for the August 2023-August 2024 period currently in place. ,Reach Out To Primary Administrator
 Celigo,Connector between Salesforce and NetSuite (NetSuite recommended partner),Active,Elliott York,Olivia Davis,Christina Wareham,General & Admin,"3-year agreement, billed annually",Reach Out To Primary Administrator
 Toga Labs,"Homerun Presales- One place to track, manage, organize, and inform your presales efforts.",Active,Adam DeMichele,Jon Tye,Arun Hari Anand,Sales,,Reach Out To Primary Administrator
 "Marketo, Inc",Adobe Marketo Engage is B2C and B2B marketing automation software.,Active,Will Davis,Eric Madariaga,Will Davis,Marketing,,Reach Out To Primary Administrator
@@ -110,10 +117,10 @@ Duende Software,"A secure, flexible framework for OpenID Connect, OAuth 2.1, and
 ",Active,Will Davis,Lorin Manco,Will Davis,Marketing,,Reach Out To Primary Administrator
 Docker,Docker Business enables enterprise-scale management and security for businesses. The cloud engineering and SRE teams use Docker Desktop for local development of Connect Cloud.,Active,Steve Close,Brett Couture,Ricky Chiu,Engineering,,Reach Out To Primary Administrator
 Clearscope,"Clearscope.io is a content optimization tool used by content creators, SEO professionals, and marketers to improve the quality and search engine ranking of their written content. Clearscope.io analyzes top-ranking search results for a specific keyword or topic and provides recommendations for relevant terms and phrases that should be included in your content to make it more comprehensive and competitive.",Active,Will Davis,Will Davis,,Marketing,,Reach Out To Primary Administrator
-Wellsaid Labs,AI text to speech ,Active,Will Davis,Jerod Johnson,Will Davis,Marketing,,Reach Out To Primary Administrator
+Wellsaid Labs,Create professional-quality voice overs in any dialect or production style with our secure AI voices.,Active,Will Davis,Jerod Johnson,Will Davis,Marketing,,Reach Out To Primary Administrator
 Ardira,"Ardira is a Salesforce ISV partner. We offer custom apps on Salesforce AppExchange. 
 ",Active,Will Davis,Bogdan Maciejuk,Will Davis,Marketing,,Reach Out To Primary Administrator
-DataDog ,Our Centralized SIEM,Active,Steve Close,Brett Couture,Walt Cobb,SRE,,Reach Out To Primary Administrator
+DataDog ,"Datadog is a cloud monitoring and security platform that unifies infrastructure monitoring, application performance monitoring (APM), log management, and security analytics for developers and IT operations.",Active,Steve Close,Brett Couture,Walt Cobb,SRE,,Reach Out To Primary Administrator
 Digicert,"DigiCert ONE allows you to rapidly deploy in any environment, roll out new services in a fraction of the time, and manage users and devices across your organization at any scale",Active,Steve Close,Ricky Chiu,Kevin Andrews,IT,,Helpdesk
 ComplianceLine,Provides HR services by putting clients first and prioritizing their needs through selfless service. Offers specialized helpline and sanction screening services. ,Active,Elliott York,Valerie Brecht,Lyndsay Moyles,HR,,Reach Out To Primary Administrator
 Greenhouse,"The Greenhouse Applicant Tracking System 
@@ -125,25 +132,27 @@ MS Azure cdata-engineering,Hosts the cloud-build environment and other engineeri
 ",Reach Out To Primary Administrator
 MS Azure cdata-support-devtest,Hosts the support test environments,Active,Steve Close,John Gwaltney,Ricky Chiu,Support; General & Admin,"Subscription ID: 49003a5c-ef33-4714-8f89-6629d3bb9a69
 ",Reach Out To Primary Administrator
-SendGrid,Cloud connect uses this to send notifications.,Active,Steve Close,Brett Couture,Ricky Chiu,SRE,,Reach Out To Primary Administrator
+SendGrid,SendGrid is a cloud-based email delivery platform owned by Twilio that handles transactional and marketing emails,Active,Steve Close,Brett Couture,Ricky Chiu,SRE,Cloud connect uses this to send notifications.,Reach Out To Primary Administrator
 Pager Duty,Notifications to the cloud/sre team for when outages happen or critical issues.,Active,Steve Close,Brett Couture,Ricky Chiu,SRE,,Reach Out To Primary Administrator
 Zoho,India HRMS tool. ZOHO People is an online Human Resource Management System designed to manage and access all your employee data from a centralized location.,Active,Bipin Dayal,Bipin Dayal,Sangamesh Hiremath,General & Admin; HR,,Reach Out To Primary Administrator
 Articulate 360,"Articulate 360 is the #1 creator platform for workplace learning. Creators save time with 1,000+ prebuilt courses, lessons, and templates; an easy-to-use review tool; and live and on-demand online training.",Active,Steve Close,IT Admin,Rachel Lawrimore,Sales,,Helpdesk
 Cloudflare,"Content delivery network services, cloud cybersecurity, DDoS mitigation, wide area network services, reverse proxies, Domain Name Service, and ICANN-accredited domain registration services",Active,Steve Close,Brett Couture,Ricky Chiu,Engineering,,Reach Out To Primary Administrator
-Cognism,"Sales, SDR, BDR teams need an external data source with good quality records for outbound motions - to get more new prospects and potential deals. Cognism was selected through initial research as one of the best quality data source.",Active,Adam DeMichele,Bogdan Maciejuk,,Sales,,Reach Out To Primary Administrator
+Cognism,"Cognism is a sales intelligence platform founded in 2015 and headquartered in London, United Kingdom. It provides B2B sales and marketing teams with real-time company, people, and event data for prospecting. ",Active,Adam DeMichele,Bogdan Maciejuk,,Sales,,Reach Out To Primary Administrator
 Seamless.ai,"Sales, SDR, BDR teams need an external data source with good quality records for outbound motions - to get more new prospects and potential deals. Seamless was selected through initial research as one of the best quality data source. We ask for approval to start the evaluation process of the tool, and if decided to bring it into our business space as the external data source for data prospecting and enrichment.",Active,Adam DeMichele,Bogdan Maciejuk,Ricky Chiu,Sales,,Reach Out To Primary Administrator
 Open AI/Chat GPT,OpenAI is an American artificial intelligence (AI) ChatGPT in November 2022 has been credited with catalyzing widespread interest in generative AI.,Active,Steve Close,Ricky Chiu,Kevin Andrews,IT,,Helpdesk
 Atrium ,Atrium is an AI sales management solution that helps organizations consistently produce the down funnel pipeline needed to hit their number.,Active,Adam DeMichele,IT Admin,Ricky Chiu,Sales,Add user by adding them to the exchange email group in exchange admin center. ,Helpdesk
 Eazfuscator,"Eazfuscator.NET is industrial grade obfuscator for .NET platform.
 
 The obfuscation provided by Eazfuscator.NET protects intellectual property ingrained in software, increasing commercial profitability and allowing to keep the advantage over the competition.",Active,Steve Close,Tomas Restrepo,,General & Admin; Engineering,,Reach Out To Primary Administrator
-ClickCease,Ad spend (blocking tech) ,Active,Adam DeMichele,Will Davis,,Marketing,,Reach Out To Primary Administrator
+ClickCease,"ClickCease detects and blocks click fraud on your Google, Meta and Microsoft Ads campaigns. Automatically block competitors and bots from wasting your PPC.",Active,Adam DeMichele,Will Davis,,Marketing,,Reach Out To Primary Administrator
 Goldcast Inc.,"Goldcast is an AI-powered B2B video content and digital events platform designed to help marketers host webinars, record high-quality content, and measure audience engagement. It consolidates webinar hosting, video editing, analytics, and content distribution into a single system",Active,Adam DeMichele,Will Davis,,Marketing,,Reach Out To Primary Administrator
 Navattic Inc,"Navattic Platform Fee
 
 Tracking scripts. Insert tracking scripts to send demo engagement to other platforms. ",Active,Raviv Levi,Ricky Chiu,,Engineering,,Helpdesk
 Asknicely,AskNicely is an AI-powered customer experience (CX) management platform designed to help multi-location service businesses capture customer feedback and translate it into actionable improvements,Active,Adam DeMichele,IT Admin,Ricky Chiu,Support,add users via security group,Helpdesk
-Smartsheet Business tier,For the maintenance and testing of the Smartsheet driver.,Active,Raviv Levi,Jordan Texier,Ricky Chiu,Product Management,,Reach Out To Primary Administrator
+Smartsheet Business,"Manage budgets, payroll, assets, and financial operations. Smartsheet gives you one flexible platform to manage all your work, processes, and teams and helps your teams move faster without compromising the trust and security IT needs.
+
+For the maintenance and testing of the Smartsheet driver.",Active,Raviv Levi,Jordan Texier,Ricky Chiu,Product Management,,Reach Out To Primary Administrator
 OFAC checker,OFAC Checker - as an application running in SF will help the legal team to satisfy the requirements of checking in our business context against the sanctions list published by Treasury Department. The application will do the search for entities and contacts engaged in our opportunities and save the results into SF as well and thus providing the auditing log of searching.,Active,Elliott York,Bogdan Maciejuk,Ricky Chiu,Sales,,Reach Out To Primary Administrator
 TextExpander - Support Text Management ,"TextExpander is a powerful text expansion tool designed to enhance productivity by allowing users to create customizable snippets for frequently used content. By typing short abbreviations, users can instantly insert predefined text, reducing repetitive typing and ensuring consistency across communications. This functionality is particularly beneficial for teams aiming to streamline workflows and maintain uniform messaging. ",Active,Adam DeMichele,John Gwaltney,IT Admin,Support,,Reach Out To Primary Administrator
 ChatGPT Teams,Retrieval-Augmented Generation (RAG) utilizing ChatGPT Teams to the Product Marketing team.,Active,Will Davis,Marie Forshaw,Ricky Chiu,Marketing,,Reach Out To Primary Administrator
@@ -177,7 +186,7 @@ MCP (Model Context Protocol) integration support",Active,Will Davis,IT Admin,,Ma
 Mindtickle/CORE,"The Mindtickle Revenue Enablement Platform is a solution for your entire sales team to elevate team performance, achieve more sales quotas",Active,Adam DeMichele,Kevin Andrews,Rachel Lawrimore,Sales,"Add user via enterprise app in entra, Rachel must be informed. ",Helpdesk
 Gamma connector in Claude Enterprise,"Gamma connector in Claude Enterprise, allowing users to create presentations, documents, social media posts, and web pages directly from within the Claude interface. Gamma is an AI-powered content creation platform that generates professionally designed visual content from text prompts and outlines. This connector integrates Gamma's presentation generation capabilities as a native tool within Claude, streamlining content workflows without requiring users to leave the Claude environment. ",Active,Will Davis,IT Admin,,Marketing,,Helpdesk
 n8n,n8n is a workflow automation platform that uniquely combines AI capabilities with business process automation,Active,Steve Close,Bill Golembieski,Walt Cobb,Security,,Reach Out To Primary Administrator
-Dovetail,"a user research and insights platform now in use by CData's Product Management team. Dovetail is being used to support research initiatives across CData, starting with Connect AI. The platform is currently active on a Professional plan with 2 seats at $180/seat/month ($360/month total) 4,320/yr, billed to CData UXR.",Active,Raviv Levi,Stephen Sprague,,Product Management,,Reach Out To Primary Administrator
+Dovetail,"A user research and insights platform now in use by CData's Product Management team. Dovetail is being used to support research initiatives across CData, starting with Connect AI. ",Active,Raviv Levi,Stephen Sprague,,Product Management,,Reach Out To Primary Administrator
 GitHub Enterprise,"Find and fix vulnerabilities natively. Automate code, secret, and dependency scanning with GitHub Advanced Security, built directly into the workflow.",Active,Steve Close,IT Admin,,IT,,Helpdesk
 Ballpark,"AI-powered product research platform for moderated and unmoderated UX research. Built-in hosted video conferencing for live interviews — does not rely on Teams, Zoom, or any external meeting tool. ",Active,Manish Patel,Stephen Sprague,,Product Management,,Reach Out To Primary Administrator
 Twilio,"Twilio is a cloud communications platform that provides building blocks for SMS messaging, phone calls, and user authentication. Instead of a standard consumer end-user app, it functions as a backend developer tool. Companies use its programming tools to add communication features directly into their own websites and mobile applications",Active,Adam DeMichele,John Gwaltney,Meera Ramachandran,Support,,Reach Out To Primary Administrator
