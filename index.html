@@ -398,14 +398,19 @@ const DOMAIN_OVERRIDES = {
   'aws': 'aws.amazon.com',
   'amazon web services': 'aws.amazon.com',
   'heroku': 'heroku.com',
-  'auth0.com': 'auth0.com',
   'auth0': 'auth0.com',
+  'okta auth0': 'auth0.com',
   'digital ocean': 'digitalocean.com',
   'digitalocean': 'digitalocean.com',
   'axosoft gitkraken git gui pro': 'gitkraken.com',
   'gitkraken': 'gitkraken.com',
+  'jfrog': 'jfrog.com',
   'docker': 'docker.com',
   'ringcentral': 'ringcentral.com',
+  'webex': 'webex.com',
+  'toggl track': 'toggl.com',
+  'toggl': 'toggl.com',
+  'harvest': 'getharvest.com',
   'freshdesk': 'freshdesk.com',
   'freshworks': 'freshworks.com',
   'chargebee': 'chargebee.com',
@@ -413,16 +418,23 @@ const DOMAIN_OVERRIDES = {
   'brex': 'brex.com',
   'ramp': 'ramp.com',
   'bill.com': 'bill.com',
+  'coupa': 'coupa.com',
   'servicenow': 'servicenow.com',
   'jira service management': 'atlassian.com',
   'new relic': 'newrelic.com',
   'splunk': 'splunk.com',
+  'elastic': 'elastic.co',
+  'grafana': 'grafana.com',
   'sentry': 'sentry.io',
+  'fullstory': 'fullstory.com',
+  'hotjar': 'hotjar.com',
   'pendo': 'pendo.io',
   'gainsight': 'gainsight.com',
+  'marketo': 'marketo.com',
   'klaviyo': 'klaviyo.com',
   'sprout social': 'sproutsocial.com',
   'hootsuite': 'hootsuite.com',
+  'semrush': 'semrush.com',
   'twitter / x developer plan - basic tier': 'x.com',
   'twitter': 'twitter.com',
   'zoho': 'zoho.com',
@@ -436,15 +448,17 @@ const DOMAIN_OVERRIDES = {
 function deriveDomain(name) {
   const lower = name.toLowerCase().trim();
   if (DOMAIN_OVERRIDES[lower]) return DOMAIN_OVERRIDES[lower];
-  const firstWord = lower.replace(/[^a-z0-9\s]/g, ' ').trim().split(/\s/)[0];
+  // Use first meaningful word as domain base
+  const firstWord = lower.replace(/[^a-z0-9\s]/g, ' ').trim().split(/\s+/)[0];
   return firstWord + '.com';
 }
 
-const AVATAK_COLORS = ['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
+// Letter avatar colors
+const AVATAR_COLORS = ['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
 
 function letterAvatar(name) {
   const letter = (name || '?')[0].toUpperCase();
-  const color = AVATAK_COLORS[letter.charCodeAt(0) % AVATAK_COLORS.length];
+  const color = AVATAR_COLORS[letter.charCodeAt(0) % AVATAR_COLORS.length];
   return { letter, color };
 }
 
@@ -468,7 +482,7 @@ function populateFilters(rows) {
   depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
 }
 
-function sortBycol) {
+function sortBy(col) {
   if (sortCol === col) { sortAsc = !sortAsc; }
   else { sortCol = col; sortAsc = true; }
   document.querySelectorAll('th').forEach(th => th.classList.remove('sorted'));
@@ -510,6 +524,7 @@ function applyFilters() {
     const domain = deriveDomain(name);
     const { letter, color } = letterAvatar(name);
 
+    // Logo cell â built with DOM to avoid innerHTML escaping issues
     const logoCell = document.createElement('td');
     logoCell.className = 'logo-cell';
     const img = document.createElement('img');
