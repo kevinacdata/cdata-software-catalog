@@ -529,12 +529,13 @@ function applyFilters() {
     logoCell.className = 'logo-cell';
     const img = document.createElement('img');
     img.className = 'app-logo';
-    img.src = 'https://logo.clearbit.com/' + domain;
+    img.src = 'https://www.google.com/s2/favicons?domain=' + domain + '&sz=128';
     img.alt = '';
     const fallback = document.createElement('div');
     fallback.className = 'logo-fallback';
     fallback.style.background = color;
     fallback.textContent = letter;
+    img.onload = function() { if (this.naturalWidth <= 16) { this.style.display = 'none'; fallback.style.display = 'flex'; } };
     img.onerror = function() { this.style.display = 'none'; fallback.style.display = 'flex'; };
     logoCell.appendChild(img);
     logoCell.appendChild(fallback);
