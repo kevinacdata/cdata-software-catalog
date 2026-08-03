@@ -6,297 +6,284 @@
 <title>CData Software Catalog</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #f5f6f8;
-    color: #172b4d;
-    min-height: 100vh;
-  }
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+background: #f5f6f8;
+color: #172b4d;
+min-height: 100vh;
+}
 
-  header {
-    background: #000000;
-    padding: 16px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+header {
+background: #000000;
+padding: 16px 28px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
 
-  header h1 {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.2px;
-  }
+header h1 {
+color: #fff;
+font-size: 18px;
+font-weight: 600;
+letter-spacing: -0.2px;
+}
 
-  .controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 28px 12px;
-    background: #fff;
-    border-bottom: 1px solid #e3e6ea;
-    flex-wrap: wrap;
-  }
+.controls {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 16px 28px 12px;
+background: #fff;
+border-bottom: 1px solid #e3e6ea;
+flex-wrap: wrap;
+}
 
-  .search-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 200px;
-    max-width: 380px;
-  }
+.search-wrap {
+position: relative;
+flex: 1;
+min-width: 200px;
+max-width: 380px;
+}
 
-  .search-wrap svg {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #8993a4;
-    pointer-events: none;
-  }
+.search-wrap svg {
+position: absolute;
+left: 10px;
+top: 50%;
+transform: translateY(-50%);
+color: #8993a4;
+pointer-events: none;
+}
 
-  input[type="text"] {
-    width: 100%;
-    padding: 8px 12px 8px 34px;
-    border: 1px solid #dfe1e6;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #172b4d;
-    background: #fafbfc;
-    outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
+input[type="text"] {
+width: 100%;
+padding: 8px 12px 8px 34px;
+border: 1px solid #dfe1e6;
+border-radius: 6px;
+font-size: 14px;
+color: #172b4d;
+background: #fafbfc;
+outline: none;
+transition: border-color 0.15s, box-shadow 0.15s;
+}
 
-  input[type="text"]:focus {
-    border-color: #4c9aff;
-    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
-    background: #fff;
-  }
+input[type="text"]:focus {
+border-color: #4c9aff;
+box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
+background: #fff;
+}
 
-  select {
-    padding: 8px 12px;
-    border: 1px solid #dfe1e6;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #172b4d;
-    background: #fafbfc;
-    cursor: pointer;
-    outline: none;
-    min-width: 160px;
-  }
+select {
+padding: 8px 12px;
+border: 1px solid #dfe1e6;
+border-radius: 6px;
+font-size: 14px;
+color: #172b4d;
+background: #fafbfc;
+cursor: pointer;
+outline: none;
+min-width: 160px;
+}
 
-  select:focus {
-    border-color: #4c9aff;
-    box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
-  }
+select:focus {
+border-color: #4c9aff;
+box-shadow: 0 0 0 2px rgba(76,154,255,0.2);
+}
 
-  .count-badge {
-    margin-left: auto;
-    font-size: 13px;
-    color: #5e6c84;
-    white-space: nowrap;
-  }
+.count-badge {
+margin-left: auto;
+font-size: 13px;
+color: #5e6c84;
+white-space: nowrap;
+}
 
-  .request-btn {
-    padding: 8px 16px;
-    background: #0052cc;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
+.request-btn {
+padding: 8px 16px;
+background: #0052cc;
+color: #fff;
+border: none;
+border-radius: 6px;
+font-size: 13px;
+font-weight: 500;
+cursor: pointer;
+text-decoration: none;
+white-space: nowrap;
+transition: background 0.15s;
+display: inline-block;
+}
 
-  .request-btn:hover { background: #0065ff; }
+.request-btn:hover { background: #0065ff; }
 
-  .table-wrap {
-    padding: 16px 28px 32px;
-    overflow-x: auto;
-  }
+.table-wrap {
+padding: 16px 28px 32px;
+overflow-x: auto;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #e3e6ea;
-    font-size: 14px;
-  }
+table {
+width: 100%;
+border-collapse: collapse;
+background: #fff;
+border-radius: 8px;
+overflow: hidden;
+border: 1px solid #e3e6ea;
+font-size: 14px;
+}
 
-  thead tr {
-    background: #f4f5f7;
-    border-bottom: 2px solid #e3e6ea;
-  }
+thead tr {
+background: #f4f5f7;
+border-bottom: 2px solid #e3e6ea;
+}
 
-  th {
-    padding: 10px 14px;
-    text-align: left;
-    font-size: 12px;
-    font-weight: 600;
-    color: #5e6c84;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-  }
+th {
+padding: 10px 14px;
+text-align: left;
+font-size: 12px;
+font-weight: 600;
+color: #5e6c84;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+cursor: pointer;
+user-select: none;
+white-space: nowrap;
+}
 
-  th:hover { color: #172b4d; }
+th:hover { color: #172b4d; }
 
-  th .sort-icon {
-    display: inline-block;
-    margin-left: 4px;
-    opacity: 0.4;
-    font-size: 10px;
-  }
+th .sort-icon {
+display: inline-block;
+margin-left: 4px;
+opacity: 0.4;
+font-size: 10px;
+}
 
-  th.sorted .sort-icon { opacity: 1; color: #0052cc; }
+th.sorted .sort-icon { opacity: 1; color: #0052cc; }
 
-  td {
-    padding: 11px 14px;
-    border-bottom: 1px solid #f0f1f3;
-    vertical-align: middle;
-    color: #172b4d;
-  }
+th.no-sort { cursor: default; }
+th.no-sort:hover { color: #5e6c84; }
 
-  tbody tr:last-child td { border-bottom: none; }
+td {
+padding: 11px 14px;
+border-bottom: 1px solid #f0f1f3;
+vertical-align: middle;
+color: #172b4d;
+}
 
-  tbody tr:hover { background: #f8f9ff; }
+tbody tr:last-child td { border-bottom: none; }
 
-  td.label-cell {
-    font-weight: 500;
-    color: #0052cc;
-  }
+tbody tr:hover { background: #f8f9ff; }
 
-  td.desc-cell {
-    color: #5e6c84;
-    max-width: 340px;
-  }
+td.logo-cell {
+width: 48px;
+padding: 8px 4px 8px 14px;
+}
 
-  td.action-cell {
-    white-space: nowrap;
-    width: 1%;
-  }
+.app-logo {
+width: 32px;
+height: 32px;
+border-radius: 6px;
+object-fit: contain;
+display: block;
+background: #f4f5f7;
+}
 
-  .access-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 3px 10px;
-    background: #e3f2fd;
-    color: #0052cc;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.15s;
-  }
-  .access-link:hover { background: #cce0ff; }
+.logo-fallback {
+width: 32px;
+height: 32px;
+border-radius: 6px;
+display: none;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+flex-shrink: 0;
+}
 
-  .access-text {
-    font-size: 13px;
-    color: #5e6c84;
-  }
+td.label-cell {
+font-weight: 500;
+color: #0052cc;
+}
 
-  .dept-pill {
-    display: inline-block;
-    padding: 2px 9px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    white-space: nowrap;
-  }
+td.desc-cell {
+color: #5e6c84;
+max-width: 340px;
+}
 
-  .dept-IT        { background:#e3f2fd; color:#1565c0; }
-  .dept-Sales     { background:#e8f5e9; color:#2e7d32; }
-  .dept-Marketing { background:#f3e5f5; color:#6a1b9a; }
-  .dept-HR        { background:#fff3e0; color:#e65100; }
-  .dept-Engineering { background:#e0f2f1; color:#00695c; }
-  .dept-Security  { background:#fce4ec; color:#880e4f; }
-  .dept-Support   { background:#fff8e1; color:#f57f17; }
-  .dept-SRE       { background:#e8eaf6; color:#283593; }
-  .dept-default   { background:#f4f5f7; color:#5e6c84; }
+.empty-state {
+text-align: center;
+padding: 60px 20px;
+color: #8993a4;
+}
 
-  .empty-state {
-    text-align: center;
-    padding: 60px 20px;
-    color: #8993a4;
-  }
+.empty-state p { font-size: 15px; margin-top: 8px; }
 
-  .empty-state p { font-size: 15px; margin-top: 8px; }
+#loading, #error {
+text-align: center;
+padding: 60px;
+color: #5e6c84;
+font-size: 15px;
+}
 
-  #loading, #error {
-    text-align: center;
-    padding: 60px;
-    color: #5e6c84;
-    font-size: 15px;
-  }
+#error { color: #de350b; }
 
-  #error { color: #de350b; }
-
-  @media (max-width: 600px) {
-    .controls { padding: 12px 16px; }
-    .table-wrap { padding: 12px 16px 24px; }
-    header { padding: 14px 16px; }
-    td.desc-cell { display: none; }
-  }
+@media (max-width: 600px) {
+.controls { padding: 12px 16px; }
+.table-wrap { padding: 12px 16px 24px; }
+header { padding: 14px 16px; }
+td.desc-cell { display: none; }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div style="display:flex; align-items:center; gap:16px;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 346" height="26" style="color:#FFE500; flex-shrink:0;">
-      <path d="M597.62.95c95.21,0,172.33,77.21,172.33,172.33s-77.21,172.33-172.33,172.33h-188.9V.95h188.9ZM483.52,280.44h114.09c56.66,0,102.65-50.45,102.65-107.15s-45.95-107.33-102.65-107.33h-114.09v214.48Z" fill="currentColor"/>
-      <path d="M1167.43,345.61h-80.55l-21.47-65.18h-193.74l-21.19,65.18h-80.55L890.13.95h156.01l121.29,344.66ZM893.05,215.26h150.83l-49.11-149.31h-53.35l-48.37,149.31Z" fill="currentColor"/>
-      <path d="M1800,345.61h-80.55l-21.47-65.18h-193.74l-21.19,65.18h-80.55L1522.7.95h156.01l121.29,344.66ZM1525.62,215.26h150.83l-49.11-149.31h-53.35l-48.38,149.31Z" fill="currentColor"/>
-      <path d="M1450.82,65.95h-127.8v279.09h-75.91V65.95h-127.8V.38h331.5v65.57Z" fill="currentColor"/>
-      <path d="M167.19,65.96h177.65V.78H0v344.84h344.84v-65.18h-177.65c-59.24,0-107.24-48.02-107.24-107.24s48.01-107.24,107.24-107.24Z" fill="currentColor"/>
-    </svg>
-    <h1>Software Catalog</h1>
-  </div>
+<div style="display:flex; align-items:center; gap:16px;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 346" height="26" style="color:#FFE500; flex-shrink:0;">
+<path d="M597.62.95c95.21,0,172.33,77.21,172.33,172.33s-77.21,172.33-172.33,172.33h-188.9V.95h188.9ZM483.52,280.44h114.09c56.66,0,102.65-50.45,102.65-107.15s-45.95-107.33-102.65-107.33h-114.09v214.48Z" fill="currentColor"/>
+<path d="M1167.43,345.61h-80.55l-21.47-65.18h-193.74l-21.19,65.18h-80.55L890.13.95h156.01l121.29,344.66ZM893.05,215.26h150.83l-49.11-149.31h-53.35l-48.37,149.31Z" fill="currentColor"/>
+<path d="M1800,345.61h-80.55l-21.47-65.18h-193.74l-21.19,65.18h-80.55L1522.7.95h156.01l121.29,344.66ZM1525.62,215.26h150.83l-49.11-149.31h-53.35l-48.38,149.31Z" fill="currentColor"/>
+<path d="M1450.82,65.95h-127.8v279.09h-75.91V65.95h-127.8V.38h331.5v65.57Z" fill="currentColor"/>
+<path d="M167.19,65.96h177.65V.78H0v344.84h344.84v-65.18h-177.65c-59.24,0-107.24-48.02-107.24-107.24s48.01-107.24,107.24-107.24Z" fill="currentColor"/>
+</svg>
+<h1>Software Catalog</h1>
+</div>
 </header>
 
 <div class="controls">
-  <div class="search-wrap">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-    <input type="text" id="search" placeholder="Search by name or description..." oninput="applyFilters()">
-  </div>
+<div class="search-wrap">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+</svg>
+<input type="text" id="search" placeholder="Search by name or description..." oninput="applyFilters()">
+</div>
 
-  <select id="dept-filter" onchange="applyFilters()">
-    <option value="">All departments</option>
-  </select>
+<select id="dept-filter" onchange="applyFilters()">
+<option value="">All departments</option>
+</select>
 
-  <span class="count-badge" id="count"></span>
+<span class="count-badge" id="count"></span>
 
+<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access &#8599;</a>
 </div>
 
 <div class="table-wrap">
-  <div id="loading">Loading catalog...</div>
-  <div id="error" style="display:none"></div>
-  <table id="catalog-table" style="display:none">
-    <thead>
-      <tr>
-        <th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">↕</span></th>
-        <th id="th-description">Description</th>
-        <th id="th-action"></th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-  <div class="empty-state" id="empty-state" style="display:none">
-    <strong>No results found</strong>
-    <p>Try a different search term or clear your filters.</p>
-  </div>
+<div id="loading">Loading catalog...</div>
+<div id="error" style="display:none"></div>
+<table id="catalog-table" style="display:none">
+<thead>
+<tr>
+<th class="no-sort" style="width:48px;"></th>
+<th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">&#8597;</span></th>
+<th id="th-description" class="no-sort">Description</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+<div class="empty-state" id="empty-state" style="display:none">
+<strong>No results found</strong>
+<p>Try a different search term or clear your filters.</p>
+</div>
 </div>
 
 <script>
@@ -305,6 +292,124 @@ const CSV_DIRECT = 'data.csv';
 let allRows = [];
 let sortCol = 'software name';
 let sortAsc = true;
+
+const DOMAIN_OVERRIDES = {
+  'quickbooks online': 'quickbooks.intuit.com',
+  'quickbooks': 'quickbooks.intuit.com',
+  'adp workforce now': 'adp.com',
+  'adp': 'adp.com',
+  'google workspace': 'workspace.google.com',
+  'microsoft 365': 'microsoft.com',
+  'microsoft teams': 'microsoft.com',
+  'office 365': 'microsoft.com',
+  'azure': 'azure.microsoft.com',
+  'github': 'github.com',
+  'github enterprise': 'github.com',
+  'gitlab': 'gitlab.com',
+  'zoom video': 'zoom.us',
+  'zoom': 'zoom.us',
+  'zoom video communications': 'zoom.us',
+  'slack': 'slack.com',
+  'salesforce': 'salesforce.com',
+  'salesforce cpq': 'salesforce.com',
+  'jira': 'atlassian.com',
+  'confluence': 'atlassian.com',
+  'atlassian': 'atlassian.com',
+  'asana': 'asana.com',
+  'notion': 'notion.so',
+  'figma': 'figma.com',
+  'dropbox': 'dropbox.com',
+  'box': 'box.com',
+  'zendesk': 'zendesk.com',
+  'hubspot': 'hubspot.com',
+  'mailchimp': 'mailchimp.com',
+  'twilio': 'twilio.com',
+  'stripe': 'stripe.com',
+  'docusign': 'docusign.com',
+  'tableau': 'tableau.com',
+  'snowflake': 'snowflake.com',
+  'datadog': 'datadoghq.com',
+  'pagerduty': 'pagerduty.com',
+  'okta': 'okta.com',
+  '1password': '1password.com',
+  'lastpass': 'lastpass.com',
+  'typeform': 'typeform.com',
+  'typeform s.l.': 'typeform.com',
+  'lucidchart': 'lucidchart.com',
+  'miro': 'miro.com',
+  'loom': 'loom.com',
+  'grammarly': 'grammarly.com',
+  'canva': 'canva.com',
+  'trello': 'trello.com',
+  'monday.com': 'monday.com',
+  'clickup': 'clickup.com',
+  'airtable': 'airtable.com',
+  'smartsheet': 'smartsheet.com',
+  'workday': 'workday.com',
+  'bamboohr': 'bamboohr.com',
+  'avalara': 'avalara.com',
+  'adobe creative cloud': 'adobe.com',
+  'adobe': 'adobe.com',
+  'sendgrid': 'sendgrid.com',
+  'postman': 'postman.com',
+  'amplitude': 'amplitude.com',
+  'mixpanel': 'mixpanel.com',
+  'segment': 'segment.com',
+  'intercom': 'intercom.com',
+  'gong': 'gong.io',
+  'outreach': 'outreach.io',
+  'salesloft': 'salesloft.com',
+  'zoominfo': 'zoominfo.com',
+  'linkedin': 'linkedin.com',
+  'greenhouse': 'greenhouse.io',
+  'cloudflare': 'cloudflare.com',
+  'aws': 'aws.amazon.com',
+  'amazon web services': 'aws.amazon.com',
+  'auth0': 'auth0.com',
+  'axosoft gitkraken git gui pro': 'gitkraken.com',
+  'gitkraken': 'gitkraken.com',
+  'docker': 'docker.com',
+  'ringcentral': 'ringcentral.com',
+  'freshdesk': 'freshdesk.com',
+  'freshworks': 'freshworks.com',
+  'chargebee': 'chargebee.com',
+  'zuora': 'zuora.com',
+  'brex': 'brex.com',
+  'ramp': 'ramp.com',
+  'bill.com': 'bill.com',
+  'servicenow': 'servicenow.com',
+  'jira service management': 'atlassian.com',
+  'new relic': 'newrelic.com',
+  'splunk': 'splunk.com',
+  'sentry': 'sentry.io',
+  'pendo': 'pendo.io',
+  'gainsight': 'gainsight.com',
+  'klaviyo': 'klaviyo.com',
+  'sprout social': 'sproutsocial.com',
+  'hootsuite': 'hootsuite.com',
+  'twitter / x developer plan - basic tier': 'x.com',
+  'zoho': 'zoho.com',
+  'wellsaid labs': 'wellsaidlabs.com',
+  'validity': 'validity.com',
+  'textexpander': 'textexpander.com',
+  'textexpander - support text management': 'textexpander.com',
+  'toga labs': 'togas.com',
+};
+
+function deriveDomain(name) {
+  const lower = name.toLowerCase().trim();
+  if (DOMAIN_OVERRIDES[lower]) return DOMAIN_OVERRIDES[lower];
+  const firstWord = lower.replace(/[^a-z0-9\s]/g, ' ').trim().split(/\s+/)[0];
+  return firstWord + '.com';
+}
+
+const AVATAR_COLORS = ['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
+
+function letterAvatar(name) {
+  const letter = (name || '?')[0].toUpperCase();
+  const color = AVATAR_COLORS[letter.charCodeAt(0) % AVATAR_COLORS.length];
+  return { letter, color };
+}
 
 function deptClass(dept) {
   if (!dept) return 'dept-default';
@@ -322,7 +427,6 @@ function deptClass(dept) {
 
 function populateFilters(rows) {
   const depts = [...new Set(rows.flatMap(r => (r.department||'').split(';').map(s=>s.trim())).filter(Boolean))].sort();
-
   const deptSel = document.getElementById('dept-filter');
   depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
 }
@@ -335,7 +439,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? '↑' : '↓';
+    th.querySelector('.sort-icon').textContent = sortAsc ? '\u2191' : '\u2193';
   }
   applyFilters();
 }
@@ -359,23 +463,17 @@ function applyFilters() {
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = '';
 
-  document.getElementById('count').textContent = `${filtered.length} of ${allRows.length} apps`;
+  document.getElementById('count').textContent = filtered.length + ' of ' + allRows.length + ' apps';
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
   document.getElementById('catalog-table').style.display = filtered.length ? '' : 'none';
 
   filtered.forEach(r => {
     const tr = document.createElement('tr');
-    const depts = (r.department||'').split(';').map(s=>s.trim()).filter(Boolean);
-    const pillsHtml = depts.map(d => `<span class="dept-pill ${deptClass(d)}">${d}</span>`).join(' ') || '—';
-    const accessVal = (r['how to get access']||'').trim();
-    const accessHtml = accessVal.toLowerCase() === 'helpdesk'
-      ? `<a class="access-link" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">🎫 Helpdesk</a>`
-      : `<span class="access-text">${accessVal || '—'}</span>`;
-    tr.innerHTML = `
-      <td class="label-cell">${r['software name']||'—'}</td>
-      <td class="desc-cell">${r.description||'—'}</td>
-      <td class="action-cell"><a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access ↗</a></td>
-    `;
+    const name = r['software name'] || '\u2014';
+    const domain = deriveDomain(name);
+    const av = letterAvatar(name);
+
+    tr.innerHTML = '<td class="logo-cell"><img class="app-logo" src="https://logo.clearbit.com/' + domain + '" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="background:' + av.color + '">' + av.letter + '</div></td><td class="label-cell">' + name + '</td><td class="desc-cell">' + (r.description||'\u2014') + '</td>';
     tbody.appendChild(tr);
   });
 }
@@ -395,7 +493,7 @@ Papa.parse(CSV_DIRECT, {
   error() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error').style.display = 'block';
-    document.getElementById('error').textContent = 'Could not load catalog data. Make sure data.csv is uploaded to the same GitHub repo as this file.';
+    document.getElementById('error').textContent = 'Could not load catalog data.';
   }
 });
 </script>
