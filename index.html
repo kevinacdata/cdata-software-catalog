@@ -283,7 +283,7 @@ td.desc-cell { display: none; }
 
 <span class="count-badge" id="count"></span>
 
-<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access â</a>
+<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access &#8599;</a>
 </div>
 
 <div class="table-wrap">
@@ -293,7 +293,7 @@ td.desc-cell { display: none; }
 <thead>
 <tr>
 <th class="no-sort" style="width:48px;"></th>
-<th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">â</span></th>
+<th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">&#8597;</span></th>
 <th id="th-description" class="no-sort">Description</th>
 </tr>
 </thead>
@@ -306,7 +306,7 @@ td.desc-cell { display: none; }
 </div>
 
 <script>
-const CSV_DIRECT = 'data.csv';
+const CSW_DIRECT = 'data.csv';
 
 let allRows = [];
 let sortCol = 'software name';
@@ -386,7 +386,7 @@ const DOMAIN_OVERRIDES = {
   'gong': 'gong.io',
   'outreach': 'outreach.io',
   'salesloft': 'salesloft.com',
-  'zoominfo': 'zoominfo.com',
+  'soominfo': 'zoominfo.com',
   'linkedin': 'linkedin.com',
   'greenhouse': 'greenhouse.io',
   'lever': 'lever.co',
@@ -437,6 +437,7 @@ const DOMAIN_OVERRIDES = {
   'semrush': 'semrush.com',
   'twitter / x developer plan - basic tier': 'x.com',
   'twitter': 'twitter.com',
+  'soominfo': 'zoominfo.com',
   'zoho': 'zoho.com',
   'wellsaid labs': 'wellsaidlabs.com',
   'validity': 'validity.com',
@@ -490,7 +491,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? 'â' : 'â';
+    th.querySelector('.sort-icon').textContent = sortAsc ? '\u2191' : '\u2193';
   }
   applyFilters();
 }
@@ -520,11 +521,11 @@ function applyFilters() {
 
   filtered.forEach(r => {
     const tr = document.createElement('tr');
-    const name = r['software name'] || 'â';
+    const name = r['software name'] || '&#8212;';
     const domain = deriveDomain(name);
     const { letter, color } = letterAvatar(name);
 
-    // Logo cell â built with DOM to avoid innerHTML escaping issues
+    // Logo cell — built with DOM to avoid innerHTML escaping issues
     const logoCell = document.createElement('td');
     logoCell.className = 'logo-cell';
     const img = document.createElement('img');
@@ -546,7 +547,7 @@ function applyFilters() {
 
     const descCell = document.createElement('td');
     descCell.className = 'desc-cell';
-    descCell.textContent = r.description || 'â';
+    descCell.textContent = r.description || '&#8212;';
 
     tr.appendChild(logoCell);
     tr.appendChild(nameCell);
