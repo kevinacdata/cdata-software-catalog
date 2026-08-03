@@ -445,6 +445,23 @@ const DOMAIN_OVERRIDES = {
   'textexpander - support text management': 'textexpander.com',
 };
 
+// Parse OData JSON dept values like {"@odata.type":"...","Value":"Sales"} → "Sales"
+function parseDeptValue(val) {
+  if (!val || !val.trim().startsWith('{')) return val;
+  try {
+    const obj = JSON.parse(val);
+    return obj.Value || val;
+  } catch (e) {
+    return val;
+  }
+}
+
+function normalizeDept(raw) {
+  if (!raw) return '';
+  // May be semicolon-separated list of OData objects or plain strings
+  return raw.split(';').map(s => parseDeptValue(s.trim())).filter(Boolean).join('; ');
+}
+
 function deriveDomain(name) {
   const lower = name.toLowerCase().trim();
   if (DOMAIN_OVERRIDES[lower]) return DOMAIN_OVERRIDES[lower];
@@ -562,7 +579,11 @@ Papa.parse(CSV_DIRECT, {
   transformHeader: h => h.trim().toLowerCase(),
   complete(results) {
     document.getElementById('loading').style.display = 'none';
-    allRows = results.data;
+    // Normalize OData department values to plain text
+    allRows = results.data.map(r => ({
+      ...r,
+      department: normalizeDept(r.department)
+    }));
     populateFilters(allRows);
     sortBy('software name');
     document.getElementById('catalog-table').style.display = '';
