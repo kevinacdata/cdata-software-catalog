@@ -210,6 +210,25 @@ color: #5e6c84;
 max-width: 340px;
 }
 
+.dept-pill {
+display: inline-block;
+padding: 2px 9px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: 500;
+white-space: nowrap;
+}
+
+.dept-IT { background:#e3f2fd; color:#1565c0; }
+.dept-Sales { background:#e8f5e9; color:#2e7d32; }
+.dept-Marketing { background:#f3e5f5; color:#6a1b9a; }
+.dept-HR { background:#fff3e0; color:#e65100; }
+.dept-Engineering { background:#e0f2f1; color:#00695c; }
+.dept-Security { background:#fce4ec; color:#880e4f; }
+.dept-Support { background:#fff8e1; color:#f57f17; }
+.dept-SRE { background:#e8eaf6; color:#283593; }
+.dept-default { background:#f4f5f7; color:#5e6c84; }
+
 .empty-state {
 text-align: center;
 padding: 60px 20px;
@@ -264,7 +283,7 @@ td.desc-cell { display: none; }
 
 <span class="count-badge" id="count"></span>
 
-<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access &#8599;</a>
+<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access â</a>
 </div>
 
 <div class="table-wrap">
@@ -274,7 +293,7 @@ td.desc-cell { display: none; }
 <thead>
 <tr>
 <th class="no-sort" style="width:48px;"></th>
-<th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">&#8597;</span></th>
+<th onclick="sortBy('software name')" id="th-software-name">Software <span class="sort-icon">â</span></th>
 <th id="th-description" class="no-sort">Description</th>
 </tr>
 </thead>
@@ -293,6 +312,7 @@ let allRows = [];
 let sortCol = 'software name';
 let sortAsc = true;
 
+// Domain overrides for well-known apps
 const DOMAIN_OVERRIDES = {
   'quickbooks online': 'quickbooks.intuit.com',
   'quickbooks': 'quickbooks.intuit.com',
@@ -312,6 +332,7 @@ const DOMAIN_OVERRIDES = {
   'slack': 'slack.com',
   'salesforce': 'salesforce.com',
   'salesforce cpq': 'salesforce.com',
+  'salesforce sales cloud': 'salesforce.com',
   'jira': 'atlassian.com',
   'confluence': 'atlassian.com',
   'atlassian': 'atlassian.com',
@@ -335,6 +356,7 @@ const DOMAIN_OVERRIDES = {
   'lastpass': 'lastpass.com',
   'typeform': 'typeform.com',
   'typeform s.l.': 'typeform.com',
+  'surveymonkey': 'surveymonkey.com',
   'lucidchart': 'lucidchart.com',
   'miro': 'miro.com',
   'loom': 'loom.com',
@@ -347,25 +369,39 @@ const DOMAIN_OVERRIDES = {
   'smartsheet': 'smartsheet.com',
   'workday': 'workday.com',
   'bamboohr': 'bamboohr.com',
+  'gusto': 'gusto.com',
+  'netsuite': 'netsuite.com',
   'avalara': 'avalara.com',
+  'expensify': 'expensify.com',
   'adobe creative cloud': 'adobe.com',
   'adobe': 'adobe.com',
+  'adobe acrobat': 'adobe.com',
   'sendgrid': 'sendgrid.com',
   'postman': 'postman.com',
   'amplitude': 'amplitude.com',
   'mixpanel': 'mixpanel.com',
   'segment': 'segment.com',
   'intercom': 'intercom.com',
+  'drift': 'drift.com',
   'gong': 'gong.io',
   'outreach': 'outreach.io',
   'salesloft': 'salesloft.com',
   'zoominfo': 'zoominfo.com',
   'linkedin': 'linkedin.com',
   'greenhouse': 'greenhouse.io',
+  'lever': 'lever.co',
+  'workable': 'workable.com',
+  'lattice': 'lattice.com',
+  'culture amp': 'cultureamp.com',
+  '15five': '15five.com',
   'cloudflare': 'cloudflare.com',
   'aws': 'aws.amazon.com',
   'amazon web services': 'aws.amazon.com',
+  'heroku': 'heroku.com',
+  'auth0.com': 'auth0.com',
   'auth0': 'auth0.com',
+  'digital ocean': 'digitalocean.com',
+  'digitalocean': 'digitalocean.com',
   'axosoft gitkraken git gui pro': 'gitkraken.com',
   'gitkraken': 'gitkraken.com',
   'docker': 'docker.com',
@@ -388,26 +424,27 @@ const DOMAIN_OVERRIDES = {
   'sprout social': 'sproutsocial.com',
   'hootsuite': 'hootsuite.com',
   'twitter / x developer plan - basic tier': 'x.com',
+  'twitter': 'twitter.com',
   'zoho': 'zoho.com',
   'wellsaid labs': 'wellsaidlabs.com',
   'validity': 'validity.com',
+  'toga labs': 'togas.com',
   'textexpander': 'textexpander.com',
   'textexpander - support text management': 'textexpander.com',
-  'toga labs': 'togas.com',
 };
 
 function deriveDomain(name) {
   const lower = name.toLowerCase().trim();
   if (DOMAIN_OVERRIDES[lower]) return DOMAIN_OVERRIDES[lower];
-  const firstWord = lower.replace(/[^a-z0-9\s]/g, ' ').trim().split(/\s+/)[0];
+  const firstWord = lower.replace(/[^a-z0-9\s]/g, ' ').trim().split(/\s/)[0];
   return firstWord + '.com';
 }
 
-const AVATAR_COLORS = ['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
+const AVATAK_COLORS = ['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
 
 function letterAvatar(name) {
   const letter = (name || '?')[0].toUpperCase();
-  const color = AVATAR_COLORS[letter.charCodeAt(0) % AVATAR_COLORS.length];
+  const color = AVATAK_COLORS[letter.charCodeAt(0) % AVATAK_COLORS.length];
   return { letter, color };
 }
 
@@ -431,7 +468,7 @@ function populateFilters(rows) {
   depts.forEach(d => { const o = document.createElement('option'); o.value = d; o.textContent = d; deptSel.appendChild(o); });
 }
 
-function sortBy(col) {
+function sortBycol) {
   if (sortCol === col) { sortAsc = !sortAsc; }
   else { sortCol = col; sortAsc = true; }
   document.querySelectorAll('th').forEach(th => th.classList.remove('sorted'));
@@ -439,7 +476,7 @@ function sortBy(col) {
   const th = document.getElementById(thId);
   if (th) {
     th.classList.add('sorted');
-    th.querySelector('.sort-icon').textContent = sortAsc ? '\u2191' : '\u2193';
+    th.querySelector('.sort-icon').textContent = sortAsc ? 'â' : 'â';
   }
   applyFilters();
 }
@@ -463,17 +500,41 @@ function applyFilters() {
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = '';
 
-  document.getElementById('count').textContent = filtered.length + ' of ' + allRows.length + ' apps';
+  document.getElementById('count').textContent = `${filtered.length} of ${allRows.length} apps`;
   document.getElementById('empty-state').style.display = filtered.length ? 'none' : 'block';
   document.getElementById('catalog-table').style.display = filtered.length ? '' : 'none';
 
   filtered.forEach(r => {
     const tr = document.createElement('tr');
-    const name = r['software name'] || '\u2014';
+    const name = r['software name'] || 'â';
     const domain = deriveDomain(name);
-    const av = letterAvatar(name);
+    const { letter, color } = letterAvatar(name);
 
-    tr.innerHTML = '<td class="logo-cell"><img class="app-logo" src="https://logo.clearbit.com/' + domain + '" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="background:' + av.color + '">' + av.letter + '</div></td><td class="label-cell">' + name + '</td><td class="desc-cell">' + (r.description||'\u2014') + '</td>';
+    const logoCell = document.createElement('td');
+    logoCell.className = 'logo-cell';
+    const img = document.createElement('img');
+    img.className = 'app-logo';
+    img.src = 'https://logo.clearbit.com/' + domain;
+    img.alt = '';
+    const fallback = document.createElement('div');
+    fallback.className = 'logo-fallback';
+    fallback.style.background = color;
+    fallback.textContent = letter;
+    img.onerror = function() { this.style.display = 'none'; fallback.style.display = 'flex'; };
+    logoCell.appendChild(img);
+    logoCell.appendChild(fallback);
+
+    const nameCell = document.createElement('td');
+    nameCell.className = 'label-cell';
+    nameCell.textContent = name;
+
+    const descCell = document.createElement('td');
+    descCell.className = 'desc-cell';
+    descCell.textContent = r.description || 'â';
+
+    tr.appendChild(logoCell);
+    tr.appendChild(nameCell);
+    tr.appendChild(descCell);
     tbody.appendChild(tr);
   });
 }
@@ -493,7 +554,7 @@ Papa.parse(CSV_DIRECT, {
   error() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error').style.display = 'block';
-    document.getElementById('error').textContent = 'Could not load catalog data.';
+    document.getElementById('error').textContent = 'Could not load catalog data. Make sure data.csv is uploaded to the same GitHub repo as this file.';
   }
 });
 </script>
