@@ -283,7 +283,7 @@ td.desc-cell { display: none; }
 
 <span class="count-badge" id="count"></span>
 
-<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access &#8599;</a>
+<a class="request-btn" href="https://cdatajira.atlassian.net/servicedesk/customer/portal/2/group/6/create/335" target="_blank">Request access ↗</a>
 </div>
 
 <div class="table-wrap">
@@ -306,7 +306,7 @@ td.desc-cell { display: none; }
 </div>
 
 <script>
-const CSW_DIRECT = 'data.csv';
+const CSV_DIRECT = 'data.csv';
 
 let allRows = [];
 let sortCol = 'software name';
@@ -386,7 +386,7 @@ const DOMAIN_OVERRIDES = {
   'gong': 'gong.io',
   'outreach': 'outreach.io',
   'salesloft': 'salesloft.com',
-  'soominfo': 'zoominfo.com',
+  'zoominfo': 'zoominfo.com',
   'linkedin': 'linkedin.com',
   'greenhouse': 'greenhouse.io',
   'lever': 'lever.co',
@@ -437,7 +437,6 @@ const DOMAIN_OVERRIDES = {
   'semrush': 'semrush.com',
   'twitter / x developer plan - basic tier': 'x.com',
   'twitter': 'twitter.com',
-  'soominfo': 'zoominfo.com',
   'zoho': 'zoho.com',
   'wellsaid labs': 'wellsaidlabs.com',
   'validity': 'validity.com',
@@ -521,7 +520,7 @@ function applyFilters() {
 
   filtered.forEach(r => {
     const tr = document.createElement('tr');
-    const name = r['software name'] || '&#8212;';
+    const name = r['software name'] || '—';
     const domain = deriveDomain(name);
     const { letter, color } = letterAvatar(name);
 
@@ -547,7 +546,7 @@ function applyFilters() {
 
     const descCell = document.createElement('td');
     descCell.className = 'desc-cell';
-    descCell.textContent = r.description || '&#8212;';
+    descCell.textContent = r.description || '—';
 
     tr.appendChild(logoCell);
     tr.appendChild(nameCell);
