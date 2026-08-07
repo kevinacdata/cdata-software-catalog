@@ -58,3 +58,9 @@ BigQuery ,"BigQuery is the autonomous data to AI platform, automating the entire
 Office 365,"Microsoft 365 is a subscription service that includes familiar apps like Word, Excel, and PowerPoint, plus services like OneDrive, Teams, Outlook","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}"
 CData ConnectAI,"Connect AI assistants, agents, and automations to semantic-rich models of your enterprise data in minutes.
 In house product.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}"
+Iru,"Iru is the Apple device management and security platform that empowers secure and productive global work.
+MDM for Mac OS",
+Microsoft Copilot,"Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers.",
+Microsoft Copilot Studio,Copilot Studio is an end-to-end conversational AI platform that empowers you to create agents using natural language or a graphical interface.,
+Rippling,Rippling is a workforce management system that eliminates the friction from running a business.,
+Carta,"Carta's ERP for private capital combines software and services to deliver connected clarity and control across equity, fund, and portfolio management.",
