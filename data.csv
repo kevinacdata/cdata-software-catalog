@@ -1,77 +1,77 @@
 Software Name,Description,Department,website_url
-Adobe Cloud,"Enjoy the collection of professional creative software in Adobe Creative Cloud including Photoshop, Illustrator, Premiere & more on desktop, mobile & web.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Slack,"Slack is a cloud-based team communication and collaboration platform developed by Slack Technologies, which Salesforce acquired in 2020. Originally an internal tool, it publicly launched in February 2014, headquartered in San Francisco. Known for its channel-based system, direct messaging, calls, and over 2,400 app integrations, Slack operates on a freemium model offering core features and paid plans for expanded capabilities","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Salesforce,"Salesforce is a cloud-based Customer Relationship Management (CRM) platform that centralizes customer data, automates business workflows, and connects different departments like sales, service, and marketing. It acts as a single shared hub so companies can track customer interactions, manage sales pipelines, and run AI-assisted operations.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Docusign,"Send, sign, and track documents. Get signatures from anywhere, using almost any device. Finalize agreements faster.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Calendly,"Calendly is the modern scheduling platform that makes “finding time” a breeze. When connecting is easy, your teams can get more done.
-","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
+1Password,"Protect passwords and secrets, manage app access, and secure AI tools with 1Password.",IT,https://1password.com
+Adobe Cloud,"Enjoy the collection of professional creative software in Adobe Creative Cloud including Photoshop, Illustrator, Premiere & more on desktop, mobile & web.",General & Admin,https://adobe.com
+ADP Workforce Now,"ADP Workforce Now empowers clients to effectively address business challenges with a flexible, secure and integrated HCM solution.",,https://adp.com
+Amazon Business,Corporate Amazon Account for equipment and office supply purchases.,IT,https://business.amazon.com
+Articulate 360,"Articulate 360 is the #1 creator platform for workplace learning. Creators save time with 1,000+ prebuilt courses, lessons, and templates; an easy-to-use review tool; and live and on-demand online training.",Sales,https://articulate.com
+Asana,Project Management,Marketing,https://asana.com
+Asknicely,AskNicely is an AI-powered customer experience (CX) management platform designed to help multi-location service businesses capture customer feedback and translate it into actionable improvements,Support,https://asknicely.com
 Atlassian,"Atlassian is an enterprise software company specializing in team collaboration, issue tracking, and project management tools, most notably Jira, Confluence, and Trello.
 
-This encompasses access for Jira, Confluence, etc. ","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Tableau,"Tableau is a popular interactive data visualization and business intelligence software platform used to create dynamic graphs, dashboards, and business insights without requiring advanced coding.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Asana,Project Management,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Zoom Video,"Modernize workflows with Zoom's trusted collaboration tools: including video meetings, Zoom Chat, VoIP phone, webinars, whiteboard, contact center.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Hello Sign,"Dropbox Sign (formerly HelloSign) is the easiest way to send, receive and manage legally binding electronic signatures.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Lucid Chart,"Create next-generation diagrams with AI, data, and automation in Lucidchart. Understand and optimize every system and process.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Canva,"Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Snagit,"Snagit is a tool for screen capture and screen recording. Use it to grab screenshots of your screen, including long, scrolling pages, and record quick videos.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Amazon Business,Corporate Amazon Account for equipment and office supply purchases.,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Google Suite,CData Google accounts and associated apps.,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Figma Pro,Cloud based UI/UX designer software,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Concur," SAP Concur is a cloud-based platform that centralizes spend processes, giving your company better visibility and control over spending.
-
-Used for Employee Reimbursements. ","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Parallels Desktop for Mac Business Edition,Solution for optimizing business environments to run Windows applications on an Intel or Apple Mac,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Happyfox,"HappyFox is a cloud-based customer relationship management solution that provides help desk and ticketing solutions to businesses across various industries, including computer and software, education, travel and leisure, media and publishing, energy, retail, and more.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}",
-Lexion,"Lexion helps operations teams get deals done faster. See how you can accelerate sales, procurement, legal, HR, security reviews, and more.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":8,""Value"":""Legal""}",
-Camtasia,"Camtasia is a software suite, created and published by TechSmith, for creating and recording video tutorials and presentations via screencast, or via a direct recording plug-in to Microsoft PowerPoint. Other multimedia recordings may be recorded at the same time or added separately.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":6,""Value"":""Product Management""}",
-1Password,"Protect passwords and secrets, manage app access, and secure AI tools with 1Password.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Dialpad ,"VOIP voice solution with an integration to 
-SFDC
-","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}",
-LinkedIn: Sales Navigator," A paid, AI-powered B2B sales platform featuring advanced search filters, lead recommendations, and direct InMail messaging.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Perimeter 81 ,"Boost your Network Security in minutes and secure corporate network with Check Point SASE (Formerly Perimeter 81 now called Harmony SASE)
-Corporate VPN
-","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Pluralsight LCC ,Training platform for mainly support and engineering to skill up or acquire certificates. It is also used for OWASP security training,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":9,""Value"":""HR""}",
-NetSuite,"NetSuite is the leading integrated cloud business software suite, including business accounting, ERP, CRM and ecommerce software.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":1,""Value"":""General & Admin""}",
-Docker,Docker Business enables enterprise-scale management and security for businesses. The cloud engineering and SRE teams use Docker Desktop for local development of Connect Cloud.,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}",
-DataDog ,"Datadog is a cloud monitoring and security platform that unifies infrastructure monitoring, application performance monitoring (APM), log management, and security analytics for developers and IT operations.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":-1,""Value"":""SRE""}",
-Articulate 360,"Articulate 360 is the #1 creator platform for workplace learning. Creators save time with 1,000+ prebuilt courses, lessons, and templates; an easy-to-use review tool; and live and on-demand online training.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Cognism,"Cognism is a sales intelligence platform founded in 2015 and headquartered in London, United Kingdom. It provides B2B sales and marketing teams with real-time company, people, and event data for prospecting. ","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Seamless.ai,"Sales, SDR, BDR teams need an external data source with good quality records for outbound motions - to get more new prospects and potential deals. Seamless was selected through initial research as one of the best quality data source. We ask for approval to start the evaluation process of the tool, and if decided to bring it into our business space as the external data source for data prospecting and enrichment.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Chat GPT,"Use ChatGPT to answer questions, write, create images, complete work, and code—all in one place. 
-","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Atrium ,Atrium is an AI sales management solution that helps organizations consistently produce the down funnel pipeline needed to hit their number.,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Asknicely,AskNicely is an AI-powered customer experience (CX) management platform designed to help multi-location service businesses capture customer feedback and translate it into actionable improvements,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}",
-Qualified,Qualified instantly alerts sales reps when hot prospects arrive on your site. Qualified is the conversational sales and marketing platform for revenue teams,"{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}",
-Claude,"Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work. ","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":4,""Value"":""Marketing""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":6,""Value"":""Product Management""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":7,""Value"":""Security""}",
-Nooks.ai,"Nooks AI Dialer automates call tasks to boost volume, connects, and conversion rates.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Gong.io,"The Gong Revenue AI Platform helps your entire GTM organization win. Drive growth with multimodal revenue signal processing, specialized AI agents, and purpose-built applications.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-Knock.io,"Knockio is the best door to door sales app with a field service CRM for canvassing and lead and job management. Easy to use and affordable.
-","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":6,""Value"":""Product Management""}",
-Mindtickle/CORE,"The Mindtickle Revenue Enablement Platform is a solution for your entire sales team to elevate team performance, achieve more sales quotas","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":0,""Value"":""Sales""}",
-GitHub Enterprise,"Find and fix vulnerabilities natively. Automate code, secret, and dependency scanning with GitHub Advanced Security, built directly into the workflow.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
-Ballpark,"AI-powered product research platform for moderated and unmoderated UX research. Built-in hosted video conferencing for live interviews — does not rely on Teams, Zoom, or any external meeting tool. ","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":6,""Value"":""Product Management""}",
-Twilio,"Twilio is a cloud communications platform that provides building blocks for SMS messaging, phone calls, and user authentication. Instead of a standard consumer end-user app, it functions as a backend developer tool. Companies use its programming tools to add communication features directly into their own websites and mobile applications","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}",
-BigQuery ,"BigQuery is the autonomous data to AI platform, automating the entire data life cycle, from ingestion to AI-driven insights","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}",
-Office 365,"Microsoft 365 is a subscription service that includes familiar apps like Word, Excel, and PowerPoint, plus services like OneDrive, Teams, Outlook","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}",
+This encompasses access for Jira, Confluence, etc. ",Engineering; IT,https://atlassian.com
+Atrium ,Atrium is an AI sales management solution that helps organizations consistently produce the down funnel pipeline needed to hit their number.,Sales,https://atriumhq.com
+Ballpark,"AI-powered product research platform for moderated and unmoderated UX research. Built-in hosted video conferencing for live interviews — does not rely on Teams, Zoom, or any external meeting tool. ",Product Management,https://ballparkapp.com
+BigQuery ,"BigQuery is the autonomous data to AI platform, automating the entire data life cycle, from ingestion to AI-driven insights",Engineering,https://cloud.google.com/bigquery
+Calendly,"Calendly is the modern scheduling platform that makes “finding time” a breeze. When connecting is easy, your teams can get more done.
+",Marketing; General & Admin,https://calendly.com
+Camtasia,"Camtasia is a software suite, created and published by TechSmith, for creating and recording video tutorials and presentations via screencast, or via a direct recording plug-in to Microsoft PowerPoint. Other multimedia recordings may be recorded at the same time or added separately.",Product Management,https://techsmith.com/video-editor/
+Canva,"Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",Marketing,https://canva.com
+Carta,"Carta's ERP for private capital combines software and services to deliver connected clarity and control across equity, fund, and portfolio management.",,https://carta.com
 CData ConnectAI,"Connect AI assistants, agents, and automations to semantic-rich models of your enterprise data in minutes.
-In house product.","{""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":2,""Value"":""Engineering""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":5,""Value"":""IT""}; {""@odata.type"":""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference"",""Id"":3,""Value"":""Support""}",
-Iru,"Iru is the Apple device management and security platform that empowers secure and productive global work.
-MDM for Mac OS",,
-Microsoft Copilot,"Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers.",,
-Microsoft Copilot Studio,Copilot Studio is an end-to-end conversational AI platform that empowers you to create agents using natural language or a graphical interface.,,
-Rippling,Rippling is a workforce management system that eliminates the friction from running a business.,,
-Carta,"Carta's ERP for private capital combines software and services to deliver connected clarity and control across equity, fund, and portfolio management.",,
-ADP Workforce Now,"ADP Workforce Now empowers clients to effectively address business challenges with a flexible, secure and integrated HCM solution.",,
-Freshworks,"Built for agile enterprises, Freshworks runs employee service and customer support on AI-powered workflows, so teams move faster with less friction.
-
-For customer support.",,
-Checkmarx,Code Scanner,,
-Zoho,India HRMS tool. ZOHO People is an online Human Resource Management System designed to manage and access all your employee data from a centralized location.,,
-Orca,Secure your multi-cloud environment from build to runtime with the industry-leading CNAPP.,,
-Malwarebytes Endpoint,Malwarebytes AV,,
+In house product.",Engineering; IT; Support,https://cdata.com
+Chat GPT,"Use ChatGPT to answer questions, write, create images, complete work, and code—all in one place. 
+",IT,https://chatgpt.com
+Checkmarx,Code Scanner,,https://checkmarx.com
+Claude,"Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work. ",Marketing; Sales; Engineering; Support; IT; Product Management; Security,https://claude.ai
 CodeTwo,"Centrally managed Signature App.
 
-Added by default to all accounts.",,
+Added by default to all accounts.",,https://codetwo.com
+Cognism,"Cognism is a sales intelligence platform founded in 2015 and headquartered in London, United Kingdom. It provides B2B sales and marketing teams with real-time company, people, and event data for prospecting. ",Sales,https://cognism.com
+Concur," SAP Concur is a cloud-based platform that centralizes spend processes, giving your company better visibility and control over spending.
+
+Used for Employee Reimbursements. ",General & Admin,https://concur.com
+DataDog ,"Datadog is a cloud monitoring and security platform that unifies infrastructure monitoring, application performance monitoring (APM), log management, and security analytics for developers and IT operations.",SRE,https://datadoghq.com
+Dialpad ,"VOIP voice solution with an integration to 
+SFDC
+",Support,https://dialpad.com
+Docker,Docker Business enables enterprise-scale management and security for businesses. The cloud engineering and SRE teams use Docker Desktop for local development of Connect Cloud.,Engineering,https://docker.com
+Docusign,"Send, sign, and track documents. Get signatures from anywhere, using almost any device. Finalize agreements faster.",Sales; General & Admin,https://docusign.com
+Figma Pro,Cloud based UI/UX designer software,IT,https://figma.com
+Freshworks,"Built for agile enterprises, Freshworks runs employee service and customer support on AI-powered workflows, so teams move faster with less friction.
+
+For customer support.",,https://freshworks.com
+GitHub Enterprise,"Find and fix vulnerabilities natively. Automate code, secret, and dependency scanning with GitHub Advanced Security, built directly into the workflow.",IT,https://github.com/enterprise
+Gong.io,"The Gong Revenue AI Platform helps your entire GTM organization win. Drive growth with multimodal revenue signal processing, specialized AI agents, and purpose-built applications.",Sales,https://gong.io
+Google Suite,CData Google accounts and associated apps.,IT,https://workspace.google.com
+Happyfox,"HappyFox is a cloud-based customer relationship management solution that provides help desk and ticketing solutions to businesses across various industries, including computer and software, education, travel and leisure, media and publishing, energy, retail, and more.",Support,https://happyfox.com
+Hello Sign,"Dropbox Sign (formerly HelloSign) is the easiest way to send, receive and manage legally binding electronic signatures.",Marketing,https://sign.dropbox.com
+Iru,"Iru is the Apple device management and security platform that empowers secure and productive global work.
+MDM for Mac OS",,https://iru.com
+Knock.io,"Knockio is the best door to door sales app with a field service CRM for canvassing and lead and job management. Easy to use and affordable.
+",Product Management,https://knock.app
+Lexion,"Lexion helps operations teams get deals done faster. See how you can accelerate sales, procurement, legal, HR, security reviews, and more.",Legal,https://lexion.ai
+LinkedIn: Sales Navigator," A paid, AI-powered B2B sales platform featuring advanced search filters, lead recommendations, and direct InMail messaging.",Sales,https://linkedin.com/sales
+Lucid Chart,"Create next-generation diagrams with AI, data, and automation in Lucidchart. Understand and optimize every system and process.",Marketing,https://lucidchart.com
+Malwarebytes Endpoint,Malwarebytes AV,,https://malwarebytes.com
+Microsoft Copilot,"Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers.",,https://copilot.microsoft.com
+Microsoft Copilot Studio,Copilot Studio is an end-to-end conversational AI platform that empowers you to create agents using natural language or a graphical interface.,,https://copilotstudio.microsoft.com
+Mindtickle/CORE,"The Mindtickle Revenue Enablement Platform is a solution for your entire sales team to elevate team performance, achieve more sales quotas",Sales,https://mindtickle.com
+NetSuite,"NetSuite is the leading integrated cloud business software suite, including business accounting, ERP, CRM and ecommerce software.",General & Admin,https://netsuite.com
+Nooks.ai,"Nooks AI Dialer automates call tasks to boost volume, connects, and conversion rates.",Sales,https://nooks.ai
+Office 365,"Microsoft 365 is a subscription service that includes familiar apps like Word, Excel, and PowerPoint, plus services like OneDrive, Teams, Outlook",IT,https://microsoft.com/microsoft-365
+Orca,Secure your multi-cloud environment from build to runtime with the industry-leading CNAPP.,,https://orca.security
+Parallels Desktop for Mac Business Edition,Solution for optimizing business environments to run Windows applications on an Intel or Apple Mac,General & Admin,https://parallels.com
+Perimeter 81 ,"Boost your Network Security in minutes and secure corporate network with Check Point SASE (Formerly Perimeter 81 now called Harmony SASE)
+Corporate VPN
+",Engineering; IT,https://perimeter81.com
+Pluralsight LCC ,Training platform for mainly support and engineering to skill up or acquire certificates. It is also used for OWASP security training,IT; HR,https://pluralsight.com
+Qualified,Qualified instantly alerts sales reps when hot prospects arrive on your site. Qualified is the conversational sales and marketing platform for revenue teams,Marketing,https://qualified.com
+Rippling,Rippling is a workforce management system that eliminates the friction from running a business.,,https://rippling.com
+Salesforce,"Salesforce is a cloud-based Customer Relationship Management (CRM) platform that centralizes customer data, automates business workflows, and connects different departments like sales, service, and marketing. It acts as a single shared hub so companies can track customer interactions, manage sales pipelines, and run AI-assisted operations.",Sales; General & Admin,https://salesforce.com
+Seamless.ai,"Sales, SDR, BDR teams need an external data source with good quality records for outbound motions - to get more new prospects and potential deals. Seamless was selected through initial research as one of the best quality data source. We ask for approval to start the evaluation process of the tool, and if decided to bring it into our business space as the external data source for data prospecting and enrichment.",Sales,https://seamless.ai
+Slack,"Slack is a cloud-based team communication and collaboration platform developed by Slack Technologies, which Salesforce acquired in 2020. Originally an internal tool, it publicly launched in February 2014, headquartered in San Francisco. Known for its channel-based system, direct messaging, calls, and over 2,400 app integrations, Slack operates on a freemium model offering core features and paid plans for expanded capabilities",IT; General & Admin,https://slack.com
+Snagit,"Snagit is a tool for screen capture and screen recording. Use it to grab screenshots of your screen, including long, scrolling pages, and record quick videos.",General & Admin; IT,https://techsmith.com/screen-capture.html
+Tableau,"Tableau is a popular interactive data visualization and business intelligence software platform used to create dynamic graphs, dashboards, and business insights without requiring advanced coding.",General & Admin; Sales,https://tableau.com
+Twilio,"Twilio is a cloud communications platform that provides building blocks for SMS messaging, phone calls, and user authentication. Instead of a standard consumer end-user app, it functions as a backend developer tool. Companies use its programming tools to add communication features directly into their own websites and mobile applications",Support,https://twilio.com
+Zoho,India HRMS tool. ZOHO People is an online Human Resource Management System designed to manage and access all your employee data from a centralized location.,,https://zoho.com
+Zoom Video,"Modernize workflows with Zoom's trusted collaboration tools: including video meetings, Zoom Chat, VoIP phone, webinars, whiteboard, contact center.",Marketing,https://zoom.us
