@@ -1,78 +1,63 @@
 Software Name,Description,Department,website_url
-1Password,"Protect passwords and secrets, manage app access, and secure AI tools with 1Password.",IT,https://1password.com
-Adobe Cloud,"Enjoy the collection of professional creative software in Adobe Creative Cloud including Photoshop, Illustrator, Premiere & more on desktop, mobile & web.",General & Admin,https://adobe.com
-ADP Workforce Now,"ADP Workforce Now empowers clients to effectively address business challenges with a flexible, secure and integrated HCM solution.",,https://adp.com
-Amazon Business,Corporate Amazon Account for equipment and office supply purchases.,IT,https://business.amazon.com
-Articulate 360,"Articulate 360 is the #1 creator platform for workplace learning. Creators save time with 1,000+ prebuilt courses, lessons, and templates; an easy-to-use review tool; and live and on-demand online training.",Sales,https://articulate.com
-Asana,Project Management,Marketing,https://asana.com
-Asknicely,AskNicely is an AI-powered customer experience (CX) management platform designed to help multi-location service businesses capture customer feedback and translate it into actionable improvements,Support,https://asknicely.com
-Atlassian,"Atlassian is an enterprise software company specializing in team collaboration, issue tracking, and project management tools, most notably Jira, Confluence, and Trello.
-
-This encompasses access for Jira, Confluence, etc. ",Engineering; IT,https://atlassian.com
-Atrium ,Atrium is an AI sales management solution that helps organizations consistently produce the down funnel pipeline needed to hit their number.,Sales,https://atriumhq.com
-Ballpark,"AI-powered product research platform for moderated and unmoderated UX research. Built-in hosted video conferencing for live interviews — does not rely on Teams, Zoom, or any external meeting tool. ",Product Management,https://ballparkapp.com
-BigQuery ,"BigQuery is the autonomous data to AI platform, automating the entire data life cycle, from ingestion to AI-driven insights",Engineering,https://cloud.google.com/bigquery
-Calendly,"Calendly is the modern scheduling platform that makes “finding time” a breeze. When connecting is easy, your teams can get more done.
-",Marketing; General & Admin,https://calendly.com
-Camtasia,"Camtasia is a software suite, created and published by TechSmith, for creating and recording video tutorials and presentations via screencast, or via a direct recording plug-in to Microsoft PowerPoint. Other multimedia recordings may be recorded at the same time or added separately.",Product Management,https://techsmith.com/video-editor/
-Canva,"Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",Marketing,https://canva.com
-Carta,"Carta's ERP for private capital combines software and services to deliver connected clarity and control across equity, fund, and portfolio management.",,https://carta.com
-CData ConnectAI,"Connect AI assistants, agents, and automations to semantic-rich models of your enterprise data in minutes.
-In house product.",Engineering; IT; Support,https://cloud.cdata.com/
-Chat GPT,"Use ChatGPT to answer questions, write, create images, complete work, and code—all in one place. 
-",IT,https://chatgpt.com
-Checkmarx,Code Scanner,,https://checkmarx.com
-Claude,"Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work. ",Marketing; Sales; Engineering; Support; IT; Product Management; Security,https://claude.ai
-CodeTwo,"Centrally managed Signature App.
-
-Added by default to all accounts.",,https://codetwo.com
-Cognism,"Cognism is a sales intelligence platform founded in 2015 and headquartered in London, United Kingdom. It provides B2B sales and marketing teams with real-time company, people, and event data for prospecting. ",Sales,https://cognism.com
-Concur," SAP Concur is a cloud-based platform that centralizes spend processes, giving your company better visibility and control over spending.
-
-Used for Employee Reimbursements. ",General & Admin,https://concur.com
-DataDog ,"Datadog is a cloud monitoring and security platform that unifies infrastructure monitoring, application performance monitoring (APM), log management, and security analytics for developers and IT operations.",SRE,https://datadoghq.com
-Dialpad ,"VOIP voice solution with an integration to 
-SFDC
-",Support,https://dialpad.com
-Docker,Docker Business enables enterprise-scale management and security for businesses. The cloud engineering and SRE teams use Docker Desktop for local development of Connect Cloud.,Engineering,https://docker.com
-Docusign,"Send, sign, and track documents. Get signatures from anywhere, using almost any device. Finalize agreements faster.",Sales; General & Admin,https://docusign.com
-Figma Pro,Cloud based UI/UX designer software,IT,https://figma.com
-Freshworks,"Built for agile enterprises, Freshworks runs employee service and customer support on AI-powered workflows, so teams move faster with less friction.
-
-For customer support.",,https://freshworks.com
-GitHub Enterprise,"Find and fix vulnerabilities natively. Automate code, secret, and dependency scanning with GitHub Advanced Security, built directly into the workflow.",IT,https://github.com/enterprise
-Granola,Granola is an AI-powered meeting notepad and transcription app for Mac Windows and mobile devices.,General & Admin,https://www.granola.ai/
-Gong.io,"The Gong Revenue AI Platform helps your entire GTM organization win. Drive growth with multimodal revenue signal processing, specialized AI agents, and purpose-built applications.",Sales,https://gong.io
-Google Suite,CData Google accounts and associated apps.,IT,https://workspace.google.com
-Happyfox,"HappyFox is a cloud-based customer relationship management solution that provides help desk and ticketing solutions to businesses across various industries, including computer and software, education, travel and leisure, media and publishing, energy, retail, and more.",Support,https://happyfox.com
-Hello Sign,"Dropbox Sign (formerly HelloSign) is the easiest way to send, receive and manage legally binding electronic signatures.",Marketing,https://sign.dropbox.com
-Iru,"Iru is the Apple device management and security platform that empowers secure and productive global work.
-MDM for Mac OS",,https://iru.com
-Knock.io,"Knockio is the best door to door sales app with a field service CRM for canvassing and lead and job management. Easy to use and affordable.
-",Product Management,https://knock.app
-Lexion,"Lexion helps operations teams get deals done faster. See how you can accelerate sales, procurement, legal, HR, security reviews, and more.",Legal,https://lexion.ai
-LinkedIn: Sales Navigator," A paid, AI-powered B2B sales platform featuring advanced search filters, lead recommendations, and direct InMail messaging.",Sales,https://linkedin.com/sales
-Lucid Chart,"Create next-generation diagrams with AI, data, and automation in Lucidchart. Understand and optimize every system and process.",Marketing,https://lucidchart.com
-Malwarebytes Endpoint,Malwarebytes AV,,https://malwarebytes.com
-Microsoft Copilot,"Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers.",,https://copilot.microsoft.com
-Microsoft Copilot Studio,Copilot Studio is an end-to-end conversational AI platform that empowers you to create agents using natural language or a graphical interface.,,https://copilotstudio.microsoft.com
-Mindtickle/CORE,"The Mindtickle Revenue Enablement Platform is a solution for your entire sales team to elevate team performance, achieve more sales quotas",Sales,https://mindtickle.com
-NetSuite,"NetSuite is the leading integrated cloud business software suite, including business accounting, ERP, CRM and ecommerce software.",General & Admin,https://netsuite.com
-Nooks.ai,"Nooks AI Dialer automates call tasks to boost volume, connects, and conversion rates.",Sales,https://nooks.ai
-Office 365,"Microsoft 365 is a subscription service that includes familiar apps like Word, Excel, and PowerPoint, plus services like OneDrive, Teams, Outlook",IT,https://microsoft.com/microsoft-365
-Orca,Secure your multi-cloud environment from build to runtime with the industry-leading CNAPP.,,https://orca.security
-Parallels Desktop for Mac Business Edition,Solution for optimizing business environments to run Windows applications on an Intel or Apple Mac,General & Admin,https://parallels.com
-Perimeter 81 ,"Boost your Network Security in minutes and secure corporate network with Check Point SASE (Formerly Perimeter 81 now called Harmony SASE)
+1Password,1Password is a password management platform used for securely storing and sharing credentials across the organization.,IT,https://1password.com
+Adobe Cloud,"Adobe Creative Cloud is a suite of professional creative applications including Photoshop, Illustrator, and Premiere Pro.",General & Admin,https://adobe.com
+ADP Workforce Now,"ADP Workforce Now is a human capital management platform used for payroll, HR, benefits, and workforce administration.",,https://adp.com
+Amazon Business,Amazon Business is an online purchasing platform used for procuring business supplies and managing purchase approvals.,IT,https://business.amazon.com
+Articulate 360,Articulate 360 is an e-learning authoring platform used for building training courses and interactive learning content.,Sales,https://articulate.com
+Asana,"Asana is a project management platform used for task tracking, team coordination, and workflow management.",Marketing,https://asana.com
+Asknicely,AskNicely is a customer satisfaction platform used for collecting NPS scores and feedback from customers.,Support,https://asknicely.com
+Atlassian,Atlassian is a software suite including Jira for issue tracking and Confluence for team documentation and collaboration.,Engineering; IT,https://atlassian.com
+Atrium,Atrium is a Salesforce analytics platform used for monitoring sales team performance and pipeline health.,Sales,https://atriumhq.com
+Ballpark,Ballpark is a project estimation and proposal platform used for creating and sending client-facing project quotes.,Product Management,https://ballparkapp.com
+BigQuery,BigQuery is a Google Cloud data warehousing platform used for large-scale analytics and SQL-based querying.,Engineering,https://cloud.google.com/bigquery
+Calendly,Calendly is an online scheduling platform used for automating meeting booking and calendar coordination.,Marketing; General & Admin,https://calendly.com
+Camtasia,"Camtasia is a screen recording and video editing platform used for creating tutorials, product demos, and training videos.",Product Management,https://techsmith.com/video-editor/
+Canva,"Canva is an online graphic design platform used for creating visual content, presentations, and marketing materials.",Marketing,https://canva.com
+Carta,"Carta is an equity management platform used for cap table administration, equity compensation, and fund management.",,https://carta.com
+CData ConnectAI,CData ConnectAI is a CData product providing AI tools and models with connectivity to enterprise data sources.,Engineering; IT; Support,https://cloud.cdata.com/
+Chat GPT,"OpenAI ChatGPT is a large language model platform used for AI-assisted writing, research, and productivity tasks.",IT,https://chatgpt.com
+Checkmarx,Checkmarx is a static application security testing platform used for identifying vulnerabilities in source code during development.,,https://checkmarx.com
+Claude,"Claude is an AI assistant platform developed by Anthropic, used for writing, analysis, coding, and research tasks.",Marketing; Sales; Engineering; Support; IT; Product Management; Security,https://claude.ai
+CodeTwo,CodeTwo is an email signature management platform used for standardizing and centralizing email signatures across the organization.,,https://codetwo.com
+Cognism,Cognism is a B2B sales intelligence platform used by sales and marketing teams for prospecting and contact data enrichment.,Sales,https://cognism.com
+Concur,"SAP Concur is an expense and travel management platform used for submitting, approving, and reporting employee expenses.",General & Admin,https://concur.com
+DataDog,"Datadog is a cloud monitoring and security platform that unifies infrastructure monitoring, application performance monitoring (APM), log management, and security analytics for developers and IT operations.",SRE,https://datadoghq.com
+Dialpad,"Dialpad is a cloud-based communications platform used for VoIP calls, messaging, and contact center operations.",Support,https://dialpad.com
+Docker,"Docker is a containerization platform used for packaging and deploying applications in portable, isolated environments.",Engineering,https://docker.com
+Docusign,"DocuSign is an electronic signature platform used for sending, signing, and managing digital agreements and contracts.",Sales; General & Admin,https://docusign.com
+Figma Pro,Figma is a cloud-based design and prototyping platform used for UI/UX design and collaborative interface development.,IT,https://figma.com
+Freshworks,Freshworks is a cloud-based customer support and CRM platform used for help desk ticketing and customer engagement.,,https://freshworks.com
+GitHub Enterprise,GitHub Enterprise is a code hosting and version control platform used for managing source code repositories and developer collaboration.,IT,https://github.com/enterprise
+Granola,Granola is an AI-powered meeting notes platform used for automatically capturing and summarizing meeting transcripts.,General & Admin,https://www.granola.ai/
+Gong.io,"Gong is a revenue intelligence platform used for recording, transcribing, and analyzing sales calls and customer interactions.",Sales,https://gong.io
+Google Suite,"Google Workspace is a cloud-based productivity suite including Gmail, Drive, Docs, Sheets, and Meet.",IT,https://workspace.google.com
+Happyfox,HappyFox is a cloud-based help desk platform used for managing support tickets and customer service operations.,Support,https://happyfox.com
+Hello Sign,Dropbox Sign (formerly HelloSign) is an electronic signature platform used for sending and managing legally binding digital signatures.,Marketing,https://sign.dropbox.com
+Iru,"Iru is an endpoint, identity, and compliance management platform used to manage and secure company devices, enforce access policies, and maintain audit readiness.",,https://iru.com
+Knock.io,"Knock is a notification infrastructure platform used for managing and delivering in-app, email, and push notifications.",Product Management,https://knock.app
+Lexion,"Lexion is a contract management platform used for storing, tracking, and managing the lifecycle of business contracts.",Legal,https://lexion.ai
+LinkedIn: Sales Navigator,LinkedIn Sales Navigator is a sales prospecting platform used for identifying leads and engaging with target accounts on LinkedIn.,Sales,https://linkedin.com/sales
+Lucid Chart,"Lucidchart is a diagramming platform used for creating flowcharts, org charts, and technical diagrams.",Marketing,https://lucidchart.com
+Malwarebytes Endpoint,"Malwarebytes Endpoint is a security platform used for threat detection, malware removal, and device protection.",,https://malwarebytes.com
+Microsoft Copilot,"Microsoft Copilot is an AI assistant integrated into Microsoft 365 used for writing, summarization, and productivity tasks.",,https://copilot.microsoft.com
+Microsoft Copilot Studio,Microsoft Copilot Studio is a low-code platform used for building and deploying custom AI agents and Copilot assistants.,,https://copilotstudio.microsoft.com
+Mindtickle/CORE,"Mindtickle is a sales readiness and training platform used for onboarding, coaching, and developing sales team skills.",Sales,https://mindtickle.com
+NetSuite,"NetSuite is a cloud-based ERP platform used for accounting, financial management, CRM, and business operations.",General & Admin,https://netsuite.com
+Nooks.ai,Nooks is an AI-powered sales dialer platform used by SDR teams for outbound calling and prospecting workflows.,Sales,https://nooks.ai
+Office 365,"Microsoft 365 is a cloud-based productivity suite including Word, Excel, PowerPoint, Outlook, and Teams.",IT,https://microsoft.com/microsoft-365
+Orca,Orca Security is a cloud security posture management platform used for detecting risks and vulnerabilities across cloud environments.,,https://orca.security
+Parallels Desktop for Mac Business Edition,Parallels Desktop is a virtualization platform used for running Windows applications on macOS devices.,General & Admin,https://parallels.com
+Perimeter 81,"Boost your Network Security in minutes and secure corporate network with Check Point SASE (Formerly Perimeter 81 now called Harmony SASE)
 Corporate VPN
 ",Engineering; IT,https://perimeter81.com
-Pluralsight LCC ,Training platform for mainly support and engineering to skill up or acquire certificates. It is also used for OWASP security training,IT; HR,https://pluralsight.com
-Qualified,Qualified instantly alerts sales reps when hot prospects arrive on your site. Qualified is the conversational sales and marketing platform for revenue teams,Marketing,https://qualified.com
-Rippling,Rippling is a workforce management system that eliminates the friction from running a business.,,https://rippling.com
-Salesforce,"Salesforce is a cloud-based Customer Relationship Management (CRM) platform that centralizes customer data, automates business workflows, and connects different departments like sales, service, and marketing. It acts as a single shared hub so companies can track customer interactions, manage sales pipelines, and run AI-assisted operations.",Sales; General & Admin,https://salesforce.com
-Seamless.ai,"Sales, SDR, BDR teams need an external data source with good quality records for outbound motions - to get more new prospects and potential deals. Seamless was selected through initial research as one of the best quality data source. We ask for approval to start the evaluation process of the tool, and if decided to bring it into our business space as the external data source for data prospecting and enrichment.",Sales,https://seamless.ai
-Slack,"Slack is a cloud-based team communication and collaboration platform developed by Slack Technologies, which Salesforce acquired in 2020. Originally an internal tool, it publicly launched in February 2014, headquartered in San Francisco. Known for its channel-based system, direct messaging, calls, and over 2,400 app integrations, Slack operates on a freemium model offering core features and paid plans for expanded capabilities",IT; General & Admin,https://slack.com
-Snagit,"Snagit is a tool for screen capture and screen recording. Use it to grab screenshots of your screen, including long, scrolling pages, and record quick videos.",General & Admin; IT,https://techsmith.com/screen-capture.html
-Tableau,"Tableau is a popular interactive data visualization and business intelligence software platform used to create dynamic graphs, dashboards, and business insights without requiring advanced coding.",General & Admin; Sales,https://tableau.com
+Pluralsight LCC,"Pluralsight is an online learning platform used by support and engineering teams for skill development, certifications, and OWASP security training.",IT; HR,https://pluralsight.com
+Qualified,"Qualified is a pipeline generation platform used on the CData website for live chat, AI-assisted engagement, and lead qualification.",Marketing,https://qualified.com
+Rippling,"Rippling is an HR and IT management platform used for employee onboarding, payroll, benefits, and device management.",,https://rippling.com
+Salesforce,"Salesforce is a cloud-based CRM platform used for managing sales, customer relationships, and revenue operations.",Sales; General & Admin,https://salesforce.com
+Seamless.ai,Seamless.ai is a B2B contact data platform used by sales and SDR teams for outbound prospecting.,Sales,https://seamless.ai
+Slack,Slack is a cloud-based team communication and collaboration platform.,IT; General & Admin,https://slack.com
+Snagit,Snagit is a screen capture and recording tool used for creating screenshots and short video clips for documentation.,General & Admin; IT,https://techsmith.com/screen-capture.html
+Tableau,Tableau is a business intelligence platform used for interactive data visualization and analytics reporting.,General & Admin; Sales,https://tableau.com
 Twilio,"Twilio is a cloud communications platform that provides building blocks for SMS messaging, phone calls, and user authentication. Instead of a standard consumer end-user app, it functions as a backend developer tool. Companies use its programming tools to add communication features directly into their own websites and mobile applications",Support,https://twilio.com
-Zoho,ZOHO People is an online Human Resource Management System designed to manage and access all your employee data from a centralized location.,,https://zoho.com
-Zoom Video,"Modernize workflows with Zoom's trusted collaboration tools: including video meetings, Zoom Chat, VoIP phone, webinars, whiteboard, contact center.",Marketing,https://zoom.us
+Zoho,"Zoho is a cloud-based business suite used for CRM, project management, and various business productivity applications.",,https://zoho.com
+Zoom Video,"Zoom is a video communications platform used for meetings, webinars, and team collaboration.",Marketing,https://zoom.us
