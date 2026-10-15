@@ -9,6 +9,16 @@ Asknicely,AskNicely is a customer satisfaction platform used for collecting NPS 
 Atlassian,Atlassian is a software suite including Jira for issue tracking and Confluence for team documentation and collaboration.,Engineering; IT,https://atlassian.com
 Atrium,Atrium is a Salesforce analytics platform used for monitoring sales team performance and pipeline health.,Sales,https://atriumhq.com
 Ballpark,Ballpark is a project estimation and proposal platform used for creating and sending client-facing project quotes.,Product Management,https://ballparkapp.com
+1Password,1Password is a password management platform used for securely storing and sharing credentials across the organization.,IT,https://1password.com
+Adobe Cloud,"Adobe Creative Cloud is a suite of professional creative applications including Photoshop, Illustrator, and Premiere Pro.",General & Admin,https://adobe.com
+ADP Workforce Now,"ADP Workforce Now is a human capital management platform used for payroll, HR, benefits, and workforce administration.",,https://adp.com
+Amazon Business,Amazon Business is an online purchasing platform used for procuring business supplies and managing purchase approvals.,IT,https://business.amazon.com
+Articulate 360,Articulate 360 is an e-learning authoring platform used for building training courses and interactive learning content.,Sales,https://articulate.com
+Asana,"Asana is a project management platform used for task tracking, team coordination, and workflow management.",Marketing,https://asana.com
+Asknicely,AskNicely is a customer satisfaction platform used for collecting NPS scores and feedback from customers.,Support,https://asknicely.com
+Atlassian,Atlassian is a software suite including Jira for issue tracking and Confluence for team documentation and collaboration.,Engineering; IT,https://atlassian.com
+Atrium,Atrium is a Salesforce analytics platform used for monitoring sales team performance and pipeline health.,Sales,https://atriumhq.com
+Ballpark,Ballpark is a project estimation and proposal platform used for creating and sending client-facing project quotes.,Product Management,https://ballparkapp.com
 BigQuery,BigQuery is a Google Cloud data warehousing platform used for large-scale analytics and SQL-based querying.,Engineering,https://cloud.google.com/bigquery
 Calendly,Calendly is an online scheduling platform used for automating meeting booking and calendar coordination.,Marketing; General & Admin,https://calendly.com
 Camtasia,"Camtasia is a screen recording and video editing platform used for creating tutorials, product demos, and training videos.",Product Management,https://techsmith.com/video-editor/
@@ -61,3 +71,9 @@ Tableau,Tableau is a business intelligence platform used for interactive data vi
 Twilio,"Twilio is a cloud communications platform that provides building blocks for SMS messaging, phone calls, and user authentication. Instead of a standard consumer end-user app, it functions as a backend developer tool. Companies use its programming tools to add communication features directly into their own websites and mobile applications",Support,https://twilio.com
 Zoho,"Zoho is a cloud-based business suite used for CRM, project management, and various business productivity applications.",,https://zoho.com
 Zoom Video,"Zoom is a video communications platform used for meetings, webinars, and team collaboration.",Marketing,https://zoom.us
+Axosoft GitKraken Git GUI Pro,GitKraken is a cross-platform desktop GUI used for managing Git version control workflows.,Engineering,https://www.gitkraken.com/
+Citrix ShareFile,Citrix ShareFile is a secure file sharing and storage platform used for transferring and managing sensitive business documents.,General & Admin,https://www.sharefile.com/
+Cursor,Cursor is an AI-powered code editor used for software development with integrated AI coding assistance.,Engineering,https://www.cursor.com/
+MyOB,"MYOB is an Australian accounting platform used for financial management, payroll, and tax compliance for small and medium businesses.",General & Admin,https://www.myob.com/
+SAP,"SAP is an enterprise resource planning platform used for managing core business processes including finance, HR, and operations.",Finance; Marketing,https://www.sap.com/
+TextExpander,TextExpander is a text expansion tool used by the support team for managing and inserting standardized response snippets.,Support,https://textexpander.com/
