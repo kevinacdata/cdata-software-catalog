@@ -84,7 +84,7 @@ td.date-cell { white-space: nowrap; color: #5e6c84; }
 <div class="empty-state" id="empty-state" style="display:none"><strong>No results found</strong><p>Try a different search term.</p></div>
 </div>
 <script>
-let allRows=[],sortCol='software name',sortAsc=true;
+let allRows=[],sortCol='',sortAsc=true;
 const COLORS=['#0052cc','#00875a','#ff5630','#ff8b00','#6554c0','#00b8d9','#36b37e','#403294'];
 function host(u){try{return new URL(u).hostname;}catch(e){return '';}}
 function sortBy(col){
