@@ -1,20 +1,20 @@
 Software Name,Description,Reason,Date Rejected,website_url
-Atlassian Rovo,AI assistant for Jira and Confluence.,Rejected,2026-08-10,https://www.atlassian.com/software/rovo
-ChatGPT Atlas,AI-powered web browser from OpenAI.,Rejected,2026-08-11,https://openai.com
-CleanShot X,Screen capture and annotation tool for macOS.,Rejected,2026-10-05,https://cleanshot.com
-Cyberduck,"File transfer client for FTP, SFTP, and cloud storage.",Rejected,2026-08-13,https://cyberduck.io
-Dropbox,Cloud file storage and sharing.,Rejected,2026-11-09,https://www.dropbox.com
-Fibbler,LinkedIn and Google Ads attribution platform.,Rejected,2026-09-30,https://www.fibbler.co
-GitHub MCP Connector,GitHub connector for Claude Cowork.,Rejected,2026-07-30,https://github.com
-Grammarly Pro,AI writing assistant.,Rejected,2026-09-10,https://www.grammarly.com
-Jira Product Discovery,Product roadmap and idea prioritization tool from Atlassian.,Rejected,2026-10-12,https://www.atlassian.com/software/jira/product-discovery
-Krisp,AI noise cancellation and meeting assistant.,Rejected,2026-09-03,https://krisp.ai
-Major,AI app and agent platform.,Rejected,2026-10-26,https://www.major.build
-Microsoft Teams Premium,Premium meeting features for Microsoft Teams.,Rejected,2026-08-13,https://www.microsoft.com/en-us/microsoft-teams/premium
-Open-Source Model Hosting (Benchmarking),Hosting open-source AI models for non-production testing.,Rejected,2026-11-12,
-Plaud,AI voice recorder and note-taking device.,Rejected,2026-09-03,https://www.plaud.ai
-Rewind,AI personal recording and memory tool.,Rejected,2026-08-17,https://www.rewind.ai
-Slack (Product Team Pilot),Team collaboration pilot using preview AI features.,Rejected,2026-10-05,https://slack.com
-Superhuman,AI email client.,Rejected,2026-09-03,https://superhuman.com
-Tipalti,Global accounts payable automation.,Rejected,2026-09-25,https://tipalti.com
-Wispr Flow,AI voice dictation.,Rejected,2026-11-09,https://wisprflow.ai
+Atlassian Rovo,AI assistant for Jira and Confluence.,Not approved,2026-08-10,https://www.atlassian.com/software/rovo
+ChatGPT Atlas,AI-powered web browser from OpenAI.,Not approved,2026-08-11,https://openai.com
+CleanShot X,Screen capture and annotation tool for macOS.,Not approved. Alternative: Snagit,2026-10-05,https://cleanshot.com
+Cyberduck,"File transfer client for FTP, SFTP, and cloud storage.",Not approved,2026-08-13,https://cyberduck.io
+Dropbox,Cloud file storage and sharing.,Not approved,2026-11-09,https://www.dropbox.com
+Fibbler,LinkedIn and Google Ads attribution platform.,Not approved,2026-09-30,https://www.fibbler.co
+GitHub MCP Connector,GitHub connector for Claude Cowork.,Not approved,2026-07-30,https://github.com
+Grammarly Pro,AI writing assistant.,Not approved,2026-09-10,https://www.grammarly.com
+Jira Product Discovery,Product roadmap and idea prioritization tool from Atlassian.,Not approved,2026-10-12,https://www.atlassian.com/software/jira/product-discovery
+Krisp,AI noise cancellation and meeting assistant.,Not approved,2026-09-03,https://krisp.ai
+Major,AI app and agent platform.,Not approved,2026-10-26,https://www.major.build
+Microsoft Teams Premium,Premium meeting features for Microsoft Teams.,Not approved. Alternative: Granola,2026-08-13,https://www.microsoft.com/en-us/microsoft-teams/premium
+Open-Source Model Hosting (Benchmarking),Hosting open-source AI models for non-production testing.,Not approved,2026-11-12,
+Plaud,AI voice recorder and note-taking device.,Not approved,2026-09-03,https://www.plaud.ai
+Rewind,AI personal recording and memory tool.,Not approved,2026-08-17,https://www.rewind.ai
+Slack (Product Team Pilot),Team collaboration pilot using preview AI features.,Not approved,2026-10-05,https://slack.com
+Superhuman,AI email client.,Not approved,2026-09-03,https://superhuman.com
+Tipalti,Global accounts payable automation.,Not approved. Alternative: Ramp,2026-09-25,https://tipalti.com
+Wispr Flow,AI voice dictation.,Not approved. Alternative: Handy,2026-11-09,https://wisprflow.ai
